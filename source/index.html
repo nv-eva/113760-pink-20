@@ -16,7 +16,7 @@
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
             <a>
-            Главная
+              Главная
             </a>
           </li>
           <li class="main-nav__item">
@@ -46,17 +46,17 @@
           <a class="download-app__download" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
           <ul class="download-app__list">
             <li class="download-app__item">
-              <a href="https://www.apple.com/ru/ios/app-store/">
+              <a class="download-app__link download-app__link--ios" href="https://www.apple.com/ru/ios/app-store/">
                 <img src="https://via.placeholder.com/45x45" width="45" height="45" alt="Скачать Pink для iPhone" title="Скачать Pink для iPhone">
               </a>
             </li>
             <li class="download-app__item">
-              <a href="https://play.google.com/store?hl=ru">
+              <a class="download-app__link download-app__link--android" href="https://play.google.com/store?hl=ru">
                 <img src="https://via.placeholder.com/45x45" width="45" height="45" alt="Скачать Pink для Android" title="Скачать Pink для Android">
               </a>
             </li>
             <li class="download-app__item">
-              <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+              <a class="download-app__link download-app__link--windows" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
                 <img src="https://via.placeholder.com/45x45" width="45" height="45" alt="Скачать Pink для Windows Phone" title="Скачать Pink для Windows Phone">
               </a>
             </li>
@@ -66,8 +66,8 @@
       </section>
       <section class="information">
         <h2 class="visually-hidden">Информация о приложении</h2>
-        <p class="information__text">Устали от серости мегаполиса?</p>
-        <p class="information__text">Нам есть, что вам<br>предложить!</p>
+        <p class="information__intro">Устали от серости мегаполиса?</p>
+        <p class="information__intro">Нам есть, что вам<br>предложить!</p>
         <ul class="information__list">
           <li class="information__item information__item--mood">
             <h3 class="information__title">Поднимает настроение</h3>
@@ -83,6 +83,121 @@
           </li>
         </ul>
       </section>
+      <section class="reviews">
+        <h2 class="visually-hidden">Отзывы</h2>
+        <div class="reviews__wrapper slider">
+          <div class="reviews__list slider__list">
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__author">Николай Петров</cite>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__author">Автор 2</cite>
+              <p class="reviews__text">Текст отзыва 2</p>
+            </blockquote>
+            <blockquote class="reviews__item slider__item">
+              <cite class="reviews__author">Автор 3</cite>
+              <p class="reviews__text">Текст отзыва 3</p>
+            </blockquote>
+          </div>
+          <div class="reviews__toggles slider__toggles">
+            <button class="slider__toggle slider__toggle--current" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
+          </div>
+        </div>
+      </section>
+      <section class="price">
+        <h2 class="visually-hidden">Стоимость</h2>
+        <table class="price__list">
+          <tr>
+            <th class="price__plan" colspan="2">
+              База<br>
+              <span class="price__cost">1,99 USD</span>
+            </th>
+            <th class="price__plan" colspan="2">
+              <span class="price__hit"> Хит </span>
+              Стандарт<br>
+              <span class="price__cost">3,99 USD</span>
+            </th>
+            <th class="price__plan" colspan="2">
+              Анлим<br>
+              <span class="price__cost">9,99 USD</span>
+            </th>
+          </tr>
+          <tr>
+            <td class="price__setting">Розовый фильтр</td>
+            <td class="price__inclusion price__inclusion--yes">да</td>
+            <td class="price__setting">Розовый фильтр</td>
+            <td class="price__inclusion price__inclusion--yes">да</td>
+            <td class="price__setting">Розовый фильтр</td>
+            <td class="price__inclusion price__inclusion--yes">да</td>
+          </tr>
+          <tr>
+            <td class="price__setting">Смайлики</td>
+            <td class="price__inclusion price__inclusion--not">нет</td>
+            <td class="price__setting">Смайлики</td>
+            <td class="price__inclusion price__inclusion--yes">да</td>
+            <td class="price__setting">Смайлики</td>
+            <td class="price__inclusion price__inclusion--yes">да</td>
+          </tr>
+          <tr>
+            <td class="price__setting">Комментарии</td>
+            <td class="price__inclusion price__inclusion--not">нет</td>
+            <td class="price__setting">Комментарии</td>
+            <td class="price__inclusion price__inclusion--not">нет</td>
+            <td class="price__setting">Комментарии</td>
+            <td class="price__inclusion price__inclusion--yes">да</td>
+          </tr>
+        </table>
+        <div class="price__toggles slider__toggles">
+          <button class="slider__toggle" type="button">1</button>
+          <button class="slider__toggle slider__toggle--current" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </div>
+      </section>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <p class="contacts__intro">Остались вопросы?<br>Свяжитесь с нами!</p>
+        <p class="contacts__text">
+          <b class="contacts__title">Звоните:</b><br>
+          <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </p>
+        <p class="contacts__text">
+          <b class="contacts__title">Пишите:</b><br>
+          <a class="contacts__link" href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a>
+        </p>
+        <p class="contacts__text">
+          <b class="contacts__title">Приезжайте в гости:</b><br>
+          ул. Большая Конюшенная, 19/8
+        </p>
+        <div class="contacts__map map">
+          <img src="https://via.placeholder.com/320x200" width="320" height="200" alt="Офис компании по адресу ул. Большая Конюшенная, 19/8">
+        </div>
+      </section>
     </main>
+    <footer class="page-footer">
+      <a class="page-footer__logo">
+        <img src="https://via.placeholder.com/145x40" width="145" height="40" alt="Мобильное приложение Pink">
+      </a>
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+          </li>
+        </ul>
+      </section>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </div>
+    </footer>
   </body>
 </html>
