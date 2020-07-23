@@ -1,3 +1,4 @@
-body {
-  background: lavenderblush;
+@import "colors.scss";
+.page__body {
+  background-color: $basic-white;
 }
