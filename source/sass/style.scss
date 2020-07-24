@@ -1,6 +1,7 @@
 @import "../../node_modules/normalize-scss/sass/_normalize.scss";
 @include normalize();
 @import "variables.scss";
+@import "fonts.scss";
 @import "global.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
