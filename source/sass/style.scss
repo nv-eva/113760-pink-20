@@ -1,19 +1,7 @@
 @import "../../node_modules/normalize-scss/sass/_normalize.scss";
 @include normalize();
 @import "variables.scss";
+@import "global.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
