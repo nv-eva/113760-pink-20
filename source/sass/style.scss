@@ -1,9 +1,7 @@
 @import "normalize.scss";
 @import "variables.scss";
-
-.page__body {
-  background-color: $extra-light;
-}
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
 
 .visually-hidden {
   position: absolute;
