@@ -1,0 +1,29 @@
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-color: $extra-light;
+  border: 3px solid $basic-dark-opacity;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.social__link {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.social__item:hover {
+  border-color: $basic-dark;
+}
+
+.social__item:active {
+  border-color: $basic-dark-opacity;;
+}
