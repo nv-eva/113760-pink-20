@@ -18,7 +18,8 @@
   border-radius: 30px;
 }
 
-.download-app__download:hover {
+.download-app__download:hover,
+.download-app__download:focus {
   color: $accent-color;
   background-color: $extra-light;
 }

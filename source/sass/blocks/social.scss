@@ -4,26 +4,27 @@
   list-style: none;
 }
 
-.social__item {
+.social__link,
+.social__icon {
   display: block;
   width: 48px;
   height: 48px;
-  background-color: $extra-light;
-  border: 3px solid $basic-dark-opacity;
   border-radius: 50%;
-  overflow: hidden;
 }
 
 .social__link {
-  display: block;
-  width: 48px;
-  height: 48px;
+  border: 3px solid $basic-dark-opacity;
 }
 
-.social__item:hover {
+.social__link:hover,
+.social__link:focus {
   border-color: $basic-dark;
 }
 
-.social__item:active {
+.social__link:active {
   border-color: $basic-dark-opacity;
+}
+
+.social__link:active .social__icon {
+  opacity: 0.3;
 }

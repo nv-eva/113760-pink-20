@@ -15,7 +15,8 @@
   fill: $extra-light;
 }
 
-.page-header__logo:not(.page-header__logo--active):hover .logo__text {
+.page-header__logo:not(.page-header__logo--active):hover .logo__text,
+.page-header__logo:not(.page-header__logo--active):focus .logo__text {
   fill: $accent-color;
 }
 

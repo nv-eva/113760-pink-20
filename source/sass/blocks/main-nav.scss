@@ -13,16 +13,17 @@
   border-bottom: 1px solid $extra-dark;
 }
 
-.main-nav__item a {
+.main-nav__link {
   color: $extra-light;
   text-decoration: none;
 }
 
-.main-nav__item:not(.main-nav__item--active):hover a {
+.main-nav__item:not(.main-nav__item--active) .main-nav__link:hover,
+.main-nav__item:not(.main-nav__item--active) .main-nav__link:focus {
   color: $accent-color;
 }
 
-.main-nav__item:not(.main-nav__item--active):active a {
+.main-nav__item:not(.main-nav__item--active) .main-nav__link:active {
   color: $extra-light;
   opacity: 0.3;
 }

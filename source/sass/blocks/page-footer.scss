@@ -15,7 +15,8 @@
   fill: $basic-dark;
 }
 
-.page-footer__logo:hover .logo__text {
+.page-footer__logo:hover .logo__text,
+.page-footer__logo:focus .logo__text {
   fill: $accent-color;
 }
 
