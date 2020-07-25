@@ -2,3 +2,12 @@
   color: $extra-light;
   background-color: $extra-dark-opacity;
 }
+
+.page-header__logo:not(.page-header__logo--active):hover svg {
+  fill: $accent-color;
+}
+
+.page-header__logo:not(.page-header__logo--active):active svg {
+  fill: $extra-light;
+  opacity: 0.3;
+}
