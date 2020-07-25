@@ -3,15 +3,23 @@
   background-color: $extra-dark-opacity;
 }
 
-.page-header__logo svg {
+.page-header__logo .logo__before--desktop {
+  display: none;
+}
+
+.page-header__logo .logo__before--tablet {
+  display: none;
+}
+
+.page-header__logo .logo__text {
   fill: $extra-light;
 }
 
-.page-header__logo:not(.page-header__logo--active):hover svg {
+.page-header__logo:not(.page-header__logo--active):hover .logo__text {
   fill: $accent-color;
 }
 
-.page-header__logo:not(.page-header__logo--active):active svg {
+.page-header__logo:not(.page-header__logo--active):active .logo__text {
   fill: $extra-light;
   opacity: 0.3;
 }
