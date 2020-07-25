@@ -2,11 +2,11 @@
   text-decoration: none;
 }
 
-.page-footer__logo .logo__before--desktop {
+.page-footer__logo .logo__desktop {
   display: none;
 }
 
-.page-footer__logo .logo__before--tablet {
+.page-footer__logo .logo__tablet {
   fill: $accent-color;
 }
 
@@ -24,6 +24,6 @@
 }
 
 .page-footer__logo:active .logo__text,
-.page-footer__logo:active .logo__before--tablet {
+.page-footer__logo:active .logo__tablet {
   opacity: 0.3;
 }
