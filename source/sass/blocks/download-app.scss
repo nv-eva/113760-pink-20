@@ -6,7 +6,7 @@
 .download-app__download {
   display: block;
   width: 280px;
-  padding-top: 17px;
+  padding-top: 18px;
   padding-bottom: 20px;
   font-weight: bold;
   line-height: 18px;
@@ -15,7 +15,17 @@
   text-decoration: none;
   background-color: transparent;
   border: 3px solid $extra-light;
-  border-radius: 29px;
+  border-radius: 30px;
+}
+
+.download-app__download:hover {
+  color: $accent-color;
+  background-color: $extra-light;
+}
+
+.download-app__download:active {
+  color: $accent-color-opacity;
+  background-color: $extra-light;
 }
 
 .download-app__list {
