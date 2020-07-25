@@ -1,0 +1,32 @@
+.download-app {
+  color: $extra-light;
+  background-color: $optional-dark;
+}
+
+.download-app__download {
+  display: block;
+  width: 280px;
+  padding-top: 17px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  color: $extra-light;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid $extra-light;
+  border-radius: 29px;
+}
+
+.download-app__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.download-app__description {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
