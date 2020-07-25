@@ -1,0 +1,21 @@
+.copyright__text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.copyright__link svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: $accent-color;
+}
+
+.copyright__link:hover svg {
+  fill: $basic-dark;
+}
+
+.copyright__link:active svg {
+  fill: $basic-dark;
+  opacity: 0.3;
+}
