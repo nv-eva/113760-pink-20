@@ -3,6 +3,10 @@
   background-color: $extra-dark-opacity;
 }
 
+.page-header__logo svg {
+  fill: $extra-light;
+}
+
 .page-header__logo:not(.page-header__logo--active):hover svg {
   fill: $accent-color;
 }

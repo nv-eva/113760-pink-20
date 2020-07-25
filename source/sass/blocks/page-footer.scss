@@ -1,0 +1,12 @@
+.page-footer__logo svg {
+  fill: $basic-dark;
+}
+
+.page-footer__logo:hover svg {
+  fill: $accent-color;
+}
+
+.page-footer__logo:active svg {
+  fill: $basic-dark;
+  opacity: 0.3;
+}
