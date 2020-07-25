@@ -1,12 +1,29 @@
-.page-footer__logo svg {
-  fill: $basic-dark;
+.page-footer__logo {
+  text-decoration: none;
 }
 
-.page-footer__logo:hover svg {
+.page-footer__logo .logo__before--desktop {
+  display: none;
+}
+
+.page-footer__logo .logo__before--tablet {
   fill: $accent-color;
 }
 
-.page-footer__logo:active svg {
+.page-footer__logo .logo__text {
+  margin-left: -32px;
   fill: $basic-dark;
+}
+
+.page-footer__logo:hover .logo__text {
+  fill: $accent-color;
+}
+
+.page-footer__logo:active .logo__text {
+  fill: $basic-dark;
+}
+
+.page-footer__logo:active .logo__text,
+.page-footer__logo:active .logo__before--tablet {
   opacity: 0.3;
 }
