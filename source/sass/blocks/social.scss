@@ -1,0 +1,30 @@
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__link,
+.social__icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.social__link {
+  border: 3px solid $basic-dark-opacity;
+}
+
+.social__link:hover,
+.social__link:focus {
+  border-color: $basic-dark;
+}
+
+.social__link:active {
+  border-color: $basic-dark-opacity;
+}
+
+.social__link:active .social__icon {
+  opacity: 0.3;
+}

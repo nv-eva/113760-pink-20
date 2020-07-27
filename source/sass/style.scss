@@ -1,1 +1,21 @@
-// Начните писать стили здесь
+/* Global */
+@import "../../node_modules/normalize-scss/sass/_normalize.scss";
+@include normalize();
+@import "variables.scss";
+@import "fonts.scss";
+@import "global.scss";
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/intro.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+
+/* Index */
+@import "blocks/download-app.scss";
+@import "blocks/information.scss";
+@import "blocks/round-diagram.scss";
+
+/* Photo */
+@import "blocks/photo.scss";

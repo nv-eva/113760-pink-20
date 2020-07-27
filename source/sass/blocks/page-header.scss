@@ -1,0 +1,26 @@
+.page-header {
+  color: $extra-light;
+  background-color: $extra-dark-opacity;
+}
+
+.page-header__logo .logo__desktop {
+  display: none;
+}
+
+.page-header__logo .logo__tablet {
+  display: none;
+}
+
+.page-header__logo .logo__text {
+  fill: $extra-light;
+}
+
+.page-header__logo:not(.page-header__logo--active):hover .logo__text,
+.page-header__logo:not(.page-header__logo--active):focus .logo__text {
+  fill: $accent-color;
+}
+
+.page-header__logo:not(.page-header__logo--active):active .logo__text {
+  fill: $extra-light;
+  opacity: 0.3;
+}
