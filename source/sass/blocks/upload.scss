@@ -1,3 +1,23 @@
 .upload {
   background-color: $basic-light;
 }
+
+.upload__tool {
+  border: none;
+}
+
+.upload__icon {
+  fill: $basic-dark;
+  opacity: 0.3;
+}
+
+.upload__tool:not(.upload__tool--current):hover .upload__icon,
+.upload__tool:not(.upload__tool--current):focus .upload__icon {
+  fill: $basic-dark;
+  opacity: 0.5;
+}
+
+.upload__tool--current .upload__icon {
+  fill: $accent-color;
+  opacity: 1;
+}
