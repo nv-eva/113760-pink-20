@@ -1,0 +1,29 @@
+.price__list {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price__plan {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: $extra-light;
+  background-color: $basic-dark;
+  border-right: 2px solid $basic-lihgt;
+  border-left: 2px solid $basic-lihgt;
+}
+
+.price__cost {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.price__hit {
+  font-weight: normal;
+  background-color: $accent-color;
+}
+
+.price__setting {
+  text-align: left;
+}
