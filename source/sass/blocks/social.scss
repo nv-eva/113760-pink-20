@@ -14,15 +14,15 @@
 
 .social__link {
   border: 3px solid $basic-dark-opacity;
-}
 
-.social__link:hover,
-.social__link:focus {
-  border-color: $basic-dark;
-}
+  &:hover,
+  &:focus {
+    border-color: $basic-dark;
+  }
 
-.social__link:active {
-  border-color: $basic-dark-opacity;
+  &:active {
+    border-color: $basic-dark-opacity;
+  }
 }
 
 .social__link:active .social__icon {
