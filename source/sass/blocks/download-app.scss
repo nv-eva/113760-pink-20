@@ -4,18 +4,10 @@
 }
 
 .download-app__download {
-  display: block;
-  width: 280px;
-  padding-top: 18px;
-  padding-bottom: 20px;
-  font-weight: bold;
-  line-height: 18px;
-  text-align: center;
   color: $extra-light;
   text-decoration: none;
   background-color: transparent;
-  border: 3px solid $extra-light;
-  border-radius: 30px;
+  border-color: $extra-light;
 
   &:hover,
   &:focus {

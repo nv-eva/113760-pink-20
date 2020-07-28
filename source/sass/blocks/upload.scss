@@ -21,3 +21,41 @@
   fill: $accent-color;
   opacity: 1;
 }
+
+.upload__button {
+  &--post {
+    color: $accent-color;
+    background-color: $extra-light;
+    border-color: $accent-color;
+  }
+
+  &--post:hover,
+  &--post:focus {
+    color: $extra-light;
+    background-color: $accent-color;
+  }
+
+  &--post:active {
+    color: $extra-light-opacity-2;
+    background-color: $accent-color;
+  }
+
+  &--cancel {
+    color: $basic-dark-opacity;
+    background-color: $extra-light;
+    border-color: $basic-dark-opacity;
+  }
+
+  &--cancel:hover,
+  &--cancel:focus {
+    color: $basic-dark-opacity-2;
+    background-color: $extra-light;
+    border-color: $basic-dark-opacity-2;
+  }
+
+  &--cancel:active {
+    color: $extra-light-opacity-2;
+    background-color: $basic-dark;
+    opacity: 0.3;
+  }
+}
