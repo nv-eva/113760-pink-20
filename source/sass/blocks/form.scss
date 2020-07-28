@@ -1,0 +1,47 @@
+.form__text,
+.form__check {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $accent-color;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+/* Text fieldset */
+
+.form__text {
+  background-color: $extra-light;
+}
+
+.form__text-input {
+  font: inherit;
+  border: 2px solid $medium-1;
+  border-radius: 1px;
+
+  &:hover,
+  &:focus {
+    border-color: $basic-dark;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    border-color: $accent-color;
+  }
+}
+
+/* Check fieldset */
+
+.form__check {
+  background-color: $basic-light;
+}
