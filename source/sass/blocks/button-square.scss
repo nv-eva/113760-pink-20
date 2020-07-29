@@ -1,0 +1,29 @@
+.button-square {
+  display: block;
+  width: 276px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+}
+
+.button-square--form {
+  color: $extra-light;
+  background-color: $optional-accent;
+
+  &:hover,
+  &:focus {
+    background-color: $optional-accent-darker;
+  }
+  &:active {
+    color: $extra-light-opacity-2;
+    background-color: $optional-accent-darker;
+  }
+  &:disabled {
+    color: $extra-light;
+    background-color: $medium-1;
+  }
+}
