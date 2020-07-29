@@ -26,8 +26,7 @@
   border: 2px solid $medium-1;
   border-radius: 1px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: $basic-dark;
   }
 
@@ -35,7 +34,8 @@
     outline: none;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: $accent-color;
   }
 }
@@ -44,4 +44,10 @@
 
 .form__check {
   background-color: $basic-light;
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
