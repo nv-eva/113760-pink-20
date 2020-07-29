@@ -18,10 +18,12 @@
   &:focus {
     background-color: $optional-accent-darker;
   }
+
   &:active {
     color: $extra-light-opacity-2;
     background-color: $optional-accent-darker;
   }
+
   &:disabled {
     color: $extra-light;
     background-color: $medium-1;
