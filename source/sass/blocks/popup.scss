@@ -1,0 +1,19 @@
+.popup {
+  text-align: center;
+  background-color: $extra-light;
+}
+
+.popup__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: $extra-dark;
+}
+
+.popup__text {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.popup__wrapper {
+  background-color: $basic-light;
+}
