@@ -1,0 +1,17 @@
+.reviews__item {
+  text-align: center;
+}
+
+.reviews__author-name {
+  font-style: normal;
+  font-weight: bold;
+  color: $extra-dark;
+}
+
+.reviews__author-description {
+  display: none;
+}
+
+.reviews__text {
+  font-size: 14px;
+}

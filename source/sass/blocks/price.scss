@@ -1,0 +1,51 @@
+.price {
+  background-color: $basic-light;
+}
+
+.price__list {
+  font-size: 14px;
+  text-transform: uppercase;
+  border-collapse: collapse;
+}
+
+.price__plan {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: $extra-light;
+  background-color: $basic-dark;
+  border-right: 2px solid $basic-light;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.price__cost {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.price__hit {
+  font-weight: normal;
+  background-color: $accent-color;
+}
+
+.price__setting,
+.price__inclusion {
+  background-color: $extra-light;
+  border-bottom: 2px solid $medium-1;
+}
+
+.price__setting {
+  text-align: left;
+  border-left: 2px solid $medium-1;
+
+  &--aside:first-child {
+    border-top: 2px solid $medium-1;
+  }
+}
+
+.price__inclusion {
+  border-right: 2px solid $medium-1;
+}

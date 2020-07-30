@@ -1,0 +1,58 @@
+.upload {
+  background-color: $basic-light;
+}
+
+.upload__tool {
+  border: none;
+}
+
+.upload__icon {
+  fill: $basic-dark;
+  opacity: 0.3;
+}
+
+.upload__tool:not(.upload__tool--current):hover .upload__icon,
+.upload__tool:not(.upload__tool--current):focus .upload__icon {
+  fill: $basic-dark;
+  opacity: 0.5;
+}
+
+.upload__tool--current .upload__icon {
+  fill: $accent-color;
+  opacity: 1;
+}
+
+.upload__button {
+  &--post {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+
+  &--post:hover,
+  &--post:focus {
+    color: $extra-light;
+    background-color: $accent-color;
+  }
+
+  &--post:active {
+    color: $extra-light-opacity-2;
+    background-color: $accent-color;
+  }
+
+  &--cancel {
+    color: $basic-dark-opacity;
+    border-color: $basic-dark-opacity;
+  }
+
+  &--cancel:hover,
+  &--cancel:focus {
+    color: $basic-dark-opacity-2;
+    border-color: $basic-dark-opacity-2;
+  }
+
+  &--cancel:active {
+    color: $extra-light-opacity-2;
+    background-color: $basic-dark;
+    opacity: 0.3;
+  }
+}

@@ -4,29 +4,21 @@
 }
 
 .download-app__download {
-  display: block;
-  width: 280px;
-  padding-top: 18px;
-  padding-bottom: 20px;
-  font-weight: bold;
-  line-height: 18px;
-  text-align: center;
   color: $extra-light;
   text-decoration: none;
   background-color: transparent;
-  border: 3px solid $extra-light;
-  border-radius: 30px;
-}
+  border-color: $extra-light;
 
-.download-app__download:hover,
-.download-app__download:focus {
-  color: $accent-color;
-  background-color: $extra-light;
-}
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $extra-light;
+  }
 
-.download-app__download:active {
-  color: $accent-color-opacity;
-  background-color: $extra-light;
+  &:active {
+    color: $accent-color-opacity;
+    background-color: $extra-light;
+  }
 }
 
 .download-app__list {

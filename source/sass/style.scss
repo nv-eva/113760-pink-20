@@ -7,15 +7,27 @@
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
-@import "blocks/intro.scss";
+@import "blocks/intro-page.scss";
+@import "blocks/intro-block.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
+@import "blocks/button-round.scss";
+@import "blocks/slider.scss";
 
 /* Index */
 @import "blocks/download-app.scss";
 @import "blocks/information.scss";
 @import "blocks/round-diagram.scss";
+@import "blocks/reviews.scss";
+@import "blocks/price.scss";
+@import "blocks/contacts.scss";
 
 /* Photo */
 @import "blocks/photo.scss";
+@import "blocks/upload.scss";
+
+/* Form */
+@import "blocks/form.scss";
+@import "blocks/popup.scss";
+@import "blocks/button-square.scss"

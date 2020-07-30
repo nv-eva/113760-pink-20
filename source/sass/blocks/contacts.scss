@@ -1,0 +1,28 @@
+.contacts {
+  text-align: center;
+}
+
+.contacts__intro {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.contacts__text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  color: $accent-color;
+}
+
+.contacts__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contacts__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: $basic-dark;
+}

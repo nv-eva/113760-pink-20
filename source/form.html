@@ -64,8 +64,8 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="intro">
-        <h1 class="intro__title">
+      <section class="intro-page">
+        <h1 class="intro-page__title">
           Конкурс на самое безбашенное<br>путешествие с Пинк
         </h1>
       </section>
@@ -73,7 +73,7 @@
         <h2 class="visually-hidden">
           Форма заявки для участия в конкурсе
         </h2>
-        <p class="form__intro">
+        <p class="form__intro intro-block">
           Поделитесь своей историей и получите шанс выиграть
           ценный приз — 1000 миль на вашу бонусную карту!
         </p>
@@ -126,7 +126,7 @@
               class="form__label form__label--center">
               Ваши безбашенные достижения в путешествии
             </legend>
-            <ul>
+            <ul class="form__list">
               <li class="form__item">
                 <input
                   class="form__check-input visually-hidden"
@@ -233,7 +233,7 @@
               class="form__label form__label--center">
               С каким приложением путешествовали?
             </legend>
-            <ul>
+            <ul class="form__list">
               <li class="form__item">
                 <input
                   class="form__radio-input visually-hidden"
@@ -287,7 +287,7 @@
             </label>
           </fieldset>
           <button
-            class="form__button form__button--send"
+            class="form__button form__button--send button-square button-square--form"
             type="submit">
             Отправить форму
           </button>
@@ -376,7 +376,7 @@
         скорее всего вы забыли их заполнить
       </p>
       <button
-        class="popup__button popup__button--failure"
+        class="popup__button popup__button--failure button-square button-square--form"
         type="submit">
         Ок
       </button>
@@ -391,7 +391,7 @@
       </p>
       <div class="popup__wrapper">
         <button
-          class="popup__button popup__button--success"
+          class="popup__button popup__button--success button-square button-square--form"
           type="submit">
           Закрыть окно
         </button>
