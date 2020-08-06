@@ -6,8 +6,16 @@
 }
 
 .page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   min-height: 100%;
   margin: 0;
   color: $basic-dark;
   background-color: $extra-light;
+}
+
+.page-main {
+  margin: 0;
+  padding: 0;
 }
