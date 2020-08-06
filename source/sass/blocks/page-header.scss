@@ -3,6 +3,12 @@
   background-color: $extra-dark-opacity;
 }
 
+.page-header__logo {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+}
+
 .page-header__logo .logo__desktop {
   display: none;
 }
