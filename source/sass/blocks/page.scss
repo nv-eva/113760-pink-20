@@ -12,10 +12,20 @@
   min-height: 100%;
   margin: 0;
   color: $basic-dark;
-  background-color: $extra-light;
+  background-color: $basic-dark;
 }
 
 .page-main {
   margin: 0;
+  margin-top: -$mobile-menu;
   padding: 0;
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -$tablet-menu;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -$tablet-menu;
+  }
 }

@@ -1,12 +1,24 @@
 .main-nav {
-  min-height: 66px;
+  width: 100%;
+  min-height: $mobile-menu;
+
+  @media (min-width: $tablet-width) {
+    min-height: $tablet-menu;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 690px;
+    margin: 0 auto;
+  }
 }
 
 /* Menu button */
 
 .main-nav__toggle {
   position: absolute;
-  top: 0;
+  top: 11px;
   right: 20px;
   order: 1;
   display: block;
@@ -16,6 +28,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__toggle .main-nav__icon {
@@ -56,7 +72,7 @@
   height: 0;
 }
 
-.main-nav--opened .main-nav__icon::before ,
+.main-nav--opened .main-nav__icon::before,
 .main-nav--opened .main-nav__icon::after {
   width: 72%;
 }
@@ -91,7 +107,24 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
+  padding-top: $mobile-menu;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: $tablet-menu;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  background-color: $basic-dark;
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
 }
 
 .main-nav__item {
@@ -103,6 +136,32 @@
   background-color: $basic-dark;
   border-top: 1px solid $extra-light-opacity;
   border-bottom: 1px solid $extra-dark;
+
+  @media (min-width: $desktop-width) {
+    font-weight: normal;
+    line-height: 18px;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.main-nav--opened .main-nav__item:first-child::before {
+  content: "";
+  position: absolute;
+  top: $mobile-menu - 1px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $extra-dark;
+
+  @media (min-width: $tablet-width) {
+    top: $tablet-menu - 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__link {
@@ -120,28 +179,7 @@
   opacity: 0.3;
 }
 
-/* Viewports */
-
-@media (min-width: $desktop-width) {
-  .main-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 690px;
-    margin: 0 auto;
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__item {
-    font-weight: normal;
-    line-height: 18px;
-    text-align: right;
-    background-color: transparent;
-    border: none;
-  }
-}
+/* Mobile and tablet menu */
 
 @media (max-width: $mobile-and-tablet) {
   .main-nav--closed .main-nav__item {
