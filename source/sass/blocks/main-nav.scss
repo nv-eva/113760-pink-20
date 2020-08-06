@@ -29,6 +29,10 @@
   border: none;
   cursor: pointer;
 
+  @media (min-width: $tablet-width) {
+    top: 32px;
+  }
+
   @media (min-width: $desktop-width) {
     display: none;
   }
