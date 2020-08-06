@@ -7,9 +7,57 @@
 
 .page-header__logo {
   position: absolute;
+  display: flex;
   top: 22px;
   left: 20px;
+
+  @media (min-width: $tablet-width) {
+    top: 30px;
+  }
 }
+
+/* Logo colors */
+
+.page-header__logo .logo__text,
+.page-header__logo .logo__tablet,
+.page-header__logo .logo__desktop-path {
+  fill: $extra-light;
+}
+
+.page-header__logo .logo__desktop-x,
+.page-header__logo .logo__desktop-i {
+  fill: $accent-color;
+}
+
+.page-header__logo:not(.page-header__logo--active):hover .logo__text,
+.page-header__logo:not(.page-header__logo--active):focus .logo__text,
+.page-header__logo:not(.page-header__logo--active):hover .logo__tablet,
+.page-header__logo:not(.page-header__logo--active):focus .logo__tablet,
+.page-header__logo:not(.page-header__logo--active):hover .logo__desktop-path,
+.page-header__logo:not(.page-header__logo--active):focus .logo__desktop-path {
+  fill: $accent-color;
+}
+
+.page-header__logo:not(.page-header__logo--active):active .logo__text,
+.page-header__logo:not(.page-header__logo--active):active .logo__tablet,
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop-path,
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop-x,
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop-i {
+  fill: $extra-light;
+  opacity: 0.3;
+}
+
+/* Logo Text */
+.page-header__logo .logo__text {
+  position: absolute;
+
+  @media (min-width: $tablet-width) {
+    top: 17px;
+    left: 71.5px;
+  }
+}
+
+/* Logo Tablet */
 
 .page-header__logo .logo__tablet {
   display: none;
@@ -23,6 +71,8 @@
   }
 }
 
+/* Logo Desktop */
+
 .page-header__logo .logo__desktop {
   display: none;
 
@@ -33,18 +83,4 @@
   @media (min-width: $desktop-width) {
     display: block;
   }
-}
-
-.page-header__logo .logo__text {
-  fill: $extra-light;
-}
-
-.page-header__logo:not(.page-header__logo--active):hover .logo__text,
-.page-header__logo:not(.page-header__logo--active):focus .logo__text {
-  fill: $accent-color;
-}
-
-.page-header__logo:not(.page-header__logo--active):active .logo__text {
-  fill: $extra-light;
-  opacity: 0.3;
 }
