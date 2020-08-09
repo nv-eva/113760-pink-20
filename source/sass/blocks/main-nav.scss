@@ -84,6 +84,14 @@
 
 /* Menu button open */
 
+.main-nav--opened .main-nav__list {
+  background-color: $basic-dark;
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
+}
+
 .main-nav--opened .main-nav__item {
   @media (max-width: $mobile-and-tablet) {
     display: block;
@@ -148,14 +156,6 @@
   }
 }
 
-.main-nav--opened .main-nav__list {
-  background-color: $basic-dark;
-
-  @media (min-width: $desktop-width) {
-    background-color: transparent;
-  }
-}
-
 .main-nav__item {
   padding-top: 21px;
   padding-bottom: 22px;
@@ -175,6 +175,20 @@
     text-align: right;
     background-color: transparent;
     border: none;
+
+    &--active:not(.main-nav__item--index) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+        left: 0;
+        height: 2px;
+        background: $extra-light;
+      }
+    }
   }
 }
 
