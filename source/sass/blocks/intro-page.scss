@@ -17,9 +17,18 @@
   }
 
   @media (min-width: $tablet-width) {
+    position: relative;
     grid-template-areas:
       "title hand-img"
       "download-app .";
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 300px 1fr;
   }
 }
 
@@ -35,7 +44,7 @@
 
   &--index {
     grid-area: title;
-    padding-top: $mobile-menu +30px;
+    padding-top: $tablet-menu +30px;
     padding-bottom: 33px;
     padding-right: 25px;
     padding-left: 25px;
@@ -43,11 +52,15 @@
     outline-offset: -3px;
 
     @media (min-width: $tablet-width) {
-
+      padding-top: $tablet-menu +102px;
+      padding-bottom: 0;
+      padding-right: 60px;
+      padding-left: 60px;
+      font-size: 40px;
     }
 
     @media (min-width: $desktop-width) {
-
+      font-size: 50px;
     }
   }
 }
@@ -58,4 +71,21 @@
   transform: translateX(-39px);
   outline: 2px solid red;
   outline-offset: -2px;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    transform: translateX(0);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    left: 0;
+  }
 }
