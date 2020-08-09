@@ -1,17 +1,61 @@
 .intro-page {
   background-color: $basic-dark;
   background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &--index {
+    display: grid;
+    grid-template-areas:
+      "title"
+      "hand-img"
+      "download-app";
+    align-items: center;
+    outline: 2px solid yellowgreen;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-areas:
+      "title hand-img"
+      "download-app .";
+  }
 }
 
 .intro-page__title {
   margin: 0;
-  padding-top: 200px;
+  padding-top: $mobile-menu + 36px;
   padding-bottom: 51px;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
   color: $extra-light;
+
+  &--index {
+    grid-area: title;
+    padding-top: $mobile-menu +30px;
+    padding-bottom: 33px;
+    padding-right: 25px;
+    padding-left: 25px;
+    outline: 3px solid blue;
+    outline-offset: -3px;
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }
+  }
+}
+
+.intro-page__hand {
+  grid-area: hand-img;
+  margin: 0 auto;
+  transform: translateX(-39px);
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
