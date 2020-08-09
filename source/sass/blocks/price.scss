@@ -41,6 +41,10 @@
   text-align: left;
   border-left: 2px solid $medium-1;
 
+  &--aside {
+    display: none;
+  }
+
   &--aside:first-child {
     border-top: 2px solid $medium-1;
   }
