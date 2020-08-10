@@ -1,21 +1,19 @@
+/* Intro */
 .information {
   padding-top: 46px;
   background-color: $extra-light;
 }
 
 .information__intro {
-  display: block;
-  margin: 0;
   padding-bottom: 33px;
   padding-right: 42px;
   padding-left: 42px;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.2;
-  text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 12px;
+    padding-bottom: 2px;
     padding-right: 27px;
     padding-left: 27px;
     font-size: 40px;
@@ -32,37 +30,102 @@
   }
 }
 
+/* Information List */
 .information__list {
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 0;
   padding: 0;
   padding-right: 30px;
   padding-left: 30px;
-  text-align: center;
   background-color: $basic-light;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    padding-right: 20px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
+    grid-gap: 20px;
+  }
 }
 
+.information__item {
+  position: relative;
+  max-width: 270px;
+  margin: 0 auto;
+  text-align: center;
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 0;
+    margin-right: auto;
+    max-width: 320px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-align: center;
+
+    &--changes {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+
+    &--friends {
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+  }
+}
+
+/* Information Text */
 .information__title {
   font-weight: bold;
   line-height: 24px;
   color: $extra-dark;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .information__description {
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
-.information__item::before {
+/* Photo image */
+/*
+.information__item::after {
   content: "";
-  display: none;
-}
-
-.information__item:last-child::after {
-  content: "";
-  display: block;
   width: 157px;
   height: 280px;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
+  outline: 6px solid pink;
+  outline-offset: -6px;
 }
+
+.information__item--friends::after {
+  display: block;
+  margin: 0 auto;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+}
+*/
