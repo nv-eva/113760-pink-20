@@ -5,6 +5,14 @@
     "title"
     "back-img";
 
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+  }
+
   &--index {
     grid-template-areas:
       "title"
@@ -12,15 +20,15 @@
       "hand-img"
       "back-img";
     align-items: center;
-  }
 
-  @media (min-width: $tablet-width) {
-    position: relative;
-    grid-template-columns: 340px 1fr;
-  }
+    @media (min-width: $tablet-width) {
+      position: relative;
+      grid-template-columns: 340px 1fr;
+    }
 
-  @media (min-width: $desktop-width) {
-    grid-template-columns: auto 300px 640px auto;
+    @media (min-width: $desktop-width) {
+      grid-template-columns: auto 300px 640px auto;
+    }
   }
 }
 
