@@ -1,7 +1,40 @@
 .page-footer {
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: $extra-light;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width-min;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.page-footer__copyright {
+  max-width: 150px;
+}
+
+.page-footer__social {
+  max-width: 270px;
+}
+
+/* Logo */
 .page-footer__logo {
   text-decoration: none;
 }

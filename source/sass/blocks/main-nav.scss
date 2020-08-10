@@ -9,7 +9,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: flex-end;
-    width: 940px;
+    width: $desktop-width-min;
     margin: 0 auto;
   }
 }
