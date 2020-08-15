@@ -1,16 +1,151 @@
+/* Grid */
 .intro-page {
-  background-color: $basic-dark;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "back-img";
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+  }
+
+  &--index {
+    grid-template-areas:
+      "title"
+      "download-app"
+      "hand-img"
+      "back-img";
+    align-items: center;
+
+    @media (min-width: $tablet-width) {
+      position: relative;
+      grid-template-columns: 340px 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: auto 300px 640px auto;
+    }
+  }
 }
 
+/* Title */
 .intro-page__title {
-  padding-top: 36px;
-  padding-bottom: 51px;
+  grid-area: title;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  min-height: 81px;
+  margin-top: $mobile-menu + 36px;
+  margin-bottom: 51px;
+  margin-right: 30px;
+  margin-left: 30px;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
   color: $extra-light;
+
+  @media (min-width: $tablet-width) {
+    min-height: 150px;
+    margin-top: $tablet-menu +81px;
+    margin-bottom: 74px;
+    margin-right: 118px;
+    margin-left: 118px;
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 820px;
+    margin-top: $tablet-menu +74px;
+    margin-bottom: 104px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--index {
+    margin-top: $tablet-menu +30px;
+    margin-bottom: 33px;
+    line-height: 1.2;
+
+    @media (min-width: $tablet-width) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      margin-top: $tablet-menu +102px;
+      margin-bottom: 0;
+      margin-right: 20px;
+      margin-left: 20px;
+      font-size: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      width: 300px;
+      margin-right: 0;
+      margin-left: 0;
+      font-size: 50px;
+    }
+  }
+}
+
+/* Hand */
+.intro-page__hand {
+  grid-area: hand-img;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 0 auto;
+  transform: translateX(-39px);
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: absolute;
+    bottom: 0;
+    right: 22px;
+    transform: translateX(0);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    position: relative;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+}
+
+/* Background */
+.intro-page__background {
+  grid-area: back-img;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $basic-dark;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-position: center center;
+  }
 }

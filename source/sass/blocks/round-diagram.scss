@@ -1,3 +1,78 @@
 .round-diagram {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: $extra-light;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 370px 570px 1fr;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &::before {
+    content: "";
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: block;
+    width: 238px;
+    height: 276px;
+    margin: 0 auto;
+    background-image: url("../img/icon-timer-2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-30px);
+
+    @media (min-width: $desktop-width) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      width: 298px;
+      height: 345px;
+      margin: 0;
+      margin-right: auto;
+      transform: translateX(0);
+    }
+  }
+}
+
+.round-diagram__title,
+.round-diagram__text,
+.round-diagram__read-more {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  max-width: 450px;
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    max-width: 570px;
+    padding-right: 60px;
+  }
+}
+
+.round-diagram__title {
+  padding-right: 90px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+
+  @media (min-width: $desktop-width) {
+    line-height: 30px;
+  }
+}
+
+.round-diagram__read-more {
+  color: $accent-color;
 }

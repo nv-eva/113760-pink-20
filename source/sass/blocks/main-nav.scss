@@ -1,16 +1,213 @@
+.main-nav {
+  width: 100%;
+  min-height: $mobile-menu;
+
+  @media (min-width: $tablet-width) {
+    min-height: $tablet-menu;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+    width: $desktop-width-min;
+    margin: 0 auto;
+  }
+}
+
+/* Menu button */
+
+.main-nav__toggle {
+  position: absolute;
+  top: 11px;
+  right: 20px;
+  order: 1;
+  display: block;
+  width: 50px;
+  height: 44px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: $mobile-and-tablet) {
+    display: none;
+  }
+}
+
+.main-nav__toggle .main-nav__icon {
+  display: block;
+  width: 100%;
+  height: 4px;
+  font-size: 0;
+  border-radius: 1px;
+}
+
+.main-nav__toggle .main-nav__icon::before,
+.main-nav__toggle .main-nav__icon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: $extra-light;
+  border-radius: 1px;
+}
+
+/* Menu button closed */
+
+.main-nav--closed .main-nav__item {
+  @media (max-width: $mobile-and-tablet) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__icon {
+  background-color: $extra-light;
+}
+
+.main-nav--closed .main-nav__icon::before {
+  transform: translate(0, -10px);
+}
+
+.main-nav--closed .main-nav__icon::after {
+  transform: translate(0, 6px);
+}
+
+/* Menu button open */
+
+.main-nav--opened .main-nav__list {
+  background-color: $basic-dark;
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
+}
+
+.main-nav--opened .main-nav__item {
+  @media (max-width: $mobile-and-tablet) {
+    display: block;
+  }
+}
+
+.main-nav--opened .main-nav__icon {
+  height: 0;
+}
+
+.main-nav--opened .main-nav__icon::before,
+.main-nav--opened .main-nav__icon::after {
+  width: 72%;
+}
+
+.main-nav--opened .main-nav__icon::before {
+  transform: translate(6px, -2px) rotate(45deg);
+}
+
+.main-nav--opened .main-nav__icon::after {
+  transform: translate(6px, -6px) rotate(-45deg);
+}
+
+/* Menu button actions */
+
+.main-nav__toggle:hover .main-nav__icon,
+.main-nav__toggle:hover .main-nav__icon::before,
+.main-nav__toggle:hover .main-nav__icon::after,
+.main-nav__toggle:focus .main-nav__icon,
+.main-nav__toggle:focus .main-nav__icon::before,
+.main-nav__toggle:focus .main-nav__icon::after {
+  background-color: $accent-color;
+}
+
+.main-nav__toggle:active .main-nav__icon,
+.main-nav__toggle:active .main-nav__icon::before,
+.main-nav__toggle:active .main-nav__icon::after {
+  background-color: $accent-color-opacity;
+}
+
+/* Menu list */
+
 .main-nav__list {
   margin: 0;
   padding: 0;
+  padding-top: $mobile-menu;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    padding-top: $tablet-menu;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 790px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 }
 
 .main-nav__item {
+  padding-top: 21px;
+  padding-bottom: 22px;
   font-weight: bold;
   line-height: 32px;
   text-align: center;
   background-color: $basic-dark;
   border-top: 1px solid $extra-light-opacity;
   border-bottom: 1px solid $extra-dark;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 78px;
+    padding-top: 9px;
+    padding-bottom: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    text-align: right;
+    background-color: transparent;
+    border: none;
+
+    &--active:not(.main-nav__item--index) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+        left: 0;
+        height: 2px;
+        background: $extra-light;
+      }
+    }
+  }
+}
+
+.main-nav--opened .main-nav__item:first-child::before {
+  content: "";
+  position: absolute;
+  top: $mobile-menu - 1px;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $extra-dark;
+
+  @media (min-width: $tablet-width) {
+    top: $tablet-menu - 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__link {

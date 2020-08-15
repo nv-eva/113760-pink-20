@@ -6,6 +6,7 @@ $basic-dark-opacity-2: rgba(40, 54, 69, 0.3);
 $extra-light: #ffffff;
 $extra-light-opacity: rgba(255, 255, 255, 0.15);
 $extra-light-opacity-2: rgba(255, 255, 255, 0.3);
+$extra-light-opacity-3: rgba(255, 255, 255, 1);
 $extra-dark: #000000;
 $extra-dark-opacity: rgba(0, 0, 0, 0.3);
 $accent-color: #d22856;
@@ -18,3 +19,14 @@ $medium-1: #e5e5e5;
 $medium-2: #dedede;
 $color-yes: #3dc644;
 $color-not: #f25b26;
+
+// Viewports
+$tablet-width: 660px;
+$desktop-width: 1000px;
+$desktop-width-min: 940px;
+$mobile-only-width: 659px;
+$mobile-and-tablet: 999px;
+
+// Menu height
+$mobile-menu: 66px;
+$tablet-menu: 110px;

@@ -1,39 +1,163 @@
+/* Intro */
+.information {
+  padding-top: 46px;
+  background-color: $extra-light;
+}
+
 .information__intro {
+  margin: 0;
+  padding-bottom: 33px;
+  padding-right: 42px;
+  padding-left: 42px;
   font-weight: 300;
   font-size: 24px;
   line-height: 1.2;
-  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 2px;
+    padding-right: 27px;
+    padding-left: 27px;
+    font-size: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    width: $desktop-width-min;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 50px;
+  }
 }
 
+/* Information List */
 .information__list {
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 0;
   padding: 0;
-  text-align: center;
+  padding-right: 30px;
+  padding-left: 30px;
   background-color: $basic-light;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    padding-right: 20px;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
+    grid-gap: 20px;
+    padding-right: 0;
+  }
 }
 
+.information__item {
+  position: relative;
+  max-width: 270px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: 10px;
+    margin-right: auto;
+    max-width: 320px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-align: center;
+
+    &--changes {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+
+    &--friends {
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+  }
+}
+
+/* Information Text */
 .information__title {
   font-weight: bold;
   line-height: 24px;
   color: $extra-dark;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .information__description {
   font-size: 14px;
   line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
-.information__item::before {
-  content: "";
-  display: none;
-}
-
-.information__item:last-child::after {
+/* Photo image */
+.information__list::after {
   content: "";
   display: block;
   width: 157px;
   height: 280px;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
+  margin: 0 auto;
+  margin-top: 30px;
   background-repeat: no-repeat;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 268px;
+    height: 482px;
+    margin-top: auto;
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.information__item::before {
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    transform: translateX(6px);
+  }
+}
+
+.information__item--mood::before {
+  background-image: url("../img/iphone-screen-1-desktop@1x.png");
+}
+
+.information__item--changes::before {
+  background-image: url("../img/iphone-screen-2-desktop@1x.png");
+}
+
+.information__item--friends::before {
+  background-image: url("../img/iphone-screen-3-desktop@1x.png");
 }
