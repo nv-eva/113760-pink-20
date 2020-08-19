@@ -1,5 +1,32 @@
+.slider {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-areas: auto 896px auto;
+    justify-content: center;
+  }
+}
+
+.slider__list {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.slider__item:not(.slider__item--current) {
+  display: none;
+}
+
 .slider__toggles {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 270px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .slider__toggle {
@@ -19,8 +46,10 @@
     margin-right: 0;
   }
 
-  /* Надо доделать, вынести border наружу */
   &--current {
+    box-sizing: content-box;
+    margin-top: -3px;
+    margin-right: 16px;
     background-color: $extra-light;
     border: 3px solid $basic-dark;
     opacity: 1;
@@ -33,5 +62,35 @@
 
   &:not(.slider__toggle--current):active {
     opacity: 0.1;
+  }
+}
+
+.slider__arrow {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: center;
+    display: block;
+    width: 22px;
+    height: 41px;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    outline: 2px solid $accent-color;
+    outline-offset: -2px;
+
+    &--prev {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      margin-right: 78px;
+    }
+
+    &--next {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      margin-left: 78px;
+    }
   }
 }

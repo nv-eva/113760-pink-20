@@ -131,7 +131,7 @@
         <h2 class="visually-hidden">Отзывы</h2>
         <div class="reviews__wrapper slider">
           <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
+            <blockquote class="reviews__item slider__item slider__item--current">
               <cite class="reviews__author-name">
                 Николай Петров
               </cite>
@@ -146,18 +146,14 @@
               </p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">
-                Автор 2
-              </cite>
+              <cite class="reviews__author-name">Автор 2</cite>
               <p class="reviews__author-description">
                 возраст, профессия
               </p>
               <p class="reviews__text">Текст отзыва 2</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">
-                Автор 3
-              </cite>
+              <cite class="reviews__author-name">Автор 3</cite>
               <p class="reviews__author-description">
                 возраст, профессия
               </p>
@@ -165,22 +161,14 @@
             </blockquote>
           </div>
           <div class="reviews__toggles slider__toggles">
-            <button
-              class="slider__toggle slider__toggle--current"
-              type="button">
-              1
-            </button>
-            <button
-              class="slider__toggle"
-              type="button">
-              2
-            </button>
-            <button
-              class="slider__toggle"
-              type="button">
-              3
-            </button>
+            <button class="slider__toggle slider__toggle--current" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
           </div>
+          <button class="slider__arrow slider__arrow--prev" type="button">
+            Предыдущий отзыв</button>
+          <button class="slider__arrow slider__arrow--next" type="button">
+            Следующий отзыв</button>
         </div>
       </section>
       <section class="price">
