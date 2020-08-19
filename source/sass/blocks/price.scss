@@ -24,7 +24,6 @@
 }
 
 /* Table header */
-
 .price__plan {
   position: relative;
   padding-top: 18px;
@@ -71,6 +70,10 @@
   background-color: $extra-light;
   border-left: 2px solid $medium-1;
   border-bottom: 2px solid $medium-1;
+
+  &:last-child {
+    border-right: 2px solid $medium-1;
+  }
 
   &:not(.price__setting--aside) {
     @media (min-width: $tablet-width) {
@@ -122,6 +125,25 @@
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+  }
+}
+
+/* Border radius */
+@media (min-width: $tablet-width) {
+  .border-radius-top-right {
+    border-top-right-radius: 3px;
+  }
+
+  .border-radius-top-left {
+    border-top-left-radius: 3px;
+  }
+
+  .border-radius-bottom-right {
+    border-bottom-right-radius: 3px;
+  }
+
+  .border-radius-bottom-left {
+    border-bottom-left-radius: 3px;
   }
 }
 
