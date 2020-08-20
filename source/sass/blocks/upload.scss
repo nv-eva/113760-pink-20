@@ -18,12 +18,44 @@
   }
 }
 
+/* Grid */
+.upload__settings {
+  display: grid;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
 .upload__photo {
   width: 100%;
-  margin: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
 }
 
 /* Tools */
+.upload__tools {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .upload__tool {
   border: none;
 }
@@ -44,9 +76,67 @@
   opacity: 1;
 }
 
+/* Range */
+.upload__ranges {
+  display: flex;
+  justify-content: center;
+  padding-top: 39px;
+  padding-bottom: 34px;
+  padding-right: 20px;
+  padding-left: 20px;
+  outline: 5px solid gray;
+  outline-offset: -5px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-right: 18px;
+    padding-left: 25px;
+  }
+}
+
+.upload__range {
+  position: relative;
+  width: 100%;
+  max-width: 288px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+
+  @media (max-width: $mobile-only-width) {
+    &--hidden {
+      display: none;
+    }
+  }
+}
 
 /* Buttons */
+.upload__buttons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
+  outline: 5px solid darkviolet;
+  outline-offset: -5px;
+
+  @media (min-width: $tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: flex-end;
+    padding-right: 13px;
+    padding-left: 27px;
+  }
+}
+
 .upload__button {
+  align-self: center;
+  margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+  }
+
   &--post {
     color: $accent-color;
     border-color: $accent-color;
