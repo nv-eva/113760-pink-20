@@ -2,6 +2,30 @@
   background-color: $extra-light;
 }
 
+.form__intro {
+  padding-top: 54px;
+  padding-bottom: 54px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .form__text,
 .form__check {
   margin: 0;
