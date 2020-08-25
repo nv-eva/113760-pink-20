@@ -89,20 +89,6 @@
   }
 }
 
-.form__text--contacts p {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.form__text--contacts .form__label {
-  @media (min-width: $tablet-width) {
-    margin-top: 10px;
-    order: 2;
-  }
-}
-
 .form__check--app .form__label {
   @media (min-width: $desktop-width) {
     padding-right: 25px;
@@ -113,16 +99,6 @@
 /* Text fieldset */
 .form__text {
   background-color: $extra-light;
-
-  &--name {
-    border: none;
-
-    @media (min-width: $tablet-width) {
-      order: -2;
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
 
   &--contacts {
     @media (min-width: $tablet-width) {
@@ -186,6 +162,14 @@
 }
 
 .form__text--name {
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    order: -2;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   @media (min-width: $desktop-width) {
     padding-bottom: 0;
     padding-right: 35px;
@@ -225,6 +209,11 @@
 }
 
 .form__text--contacts p {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (min-width: $desktop-width) {
     flex-grow: 1;
   }
@@ -237,6 +226,11 @@
 }
 
 .form__text--contacts .form__label {
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+    order: 2;
+  }
+
   @media (min-width: $desktop-width) {
     margin-left: 0;
   }
