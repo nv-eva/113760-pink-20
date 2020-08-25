@@ -69,8 +69,8 @@
           ценный приз — 1000 миль на вашу бонусную карту!
           Пожалуйста, заполните форму&nbsp;ниже:
         </p>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__text">
+        <form class="form__grid" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__text form__text--name">
             <legend class="visually-hidden">Ваше имя</legend>
             <p>
               <label class="form__label"for="form-surname">Фамилия:</label><br>
@@ -85,34 +85,16 @@
               <input class="form__text-input" id="form-patronymic" type="text" name="patronymic" placeholder="Ну и отчество тоже">
             </p>
           </fieldset>
-          <fieldset class="form__check">
-            <legend class="form__label form__label--center">
-              Ваши безбашенные<br>достижения в&nbsp;путешествии
-            </legend>
+          <fieldset class="form__check form__check--progress">
+            <legend class="form__label form__label--center">Ваши безбашенные<br>достижения в&nbsp;путешествии</legend>
             <ul class="form__list">
               <li class="form__item">
-                <input
-                  class="form__check-input visually-hidden"
-                  id="check-selfie"
-                  type="checkbox"
-                  name="selfie"
-                  checked>
-                <label
-                  for="check-selfie">
-                  Сделал селфи с акулой
-                </label>
+                <input class="form__check-input visually-hidden" id="check-selfie" type="checkbox" name="selfie" checked>
+                <label for="check-selfie">Сделал селфи с акулой</label>
               </li>
               <li class="form__item">
-                <input
-                  class="form__check-input visually-hidden"
-                  id="check-beach"
-                  type="checkbox"
-                  name="beach"
-                  checked>
-                <label
-                  for="check-beach">
-                  Обгорел на пляже
-                </label>
+                <input class="form__check-input visually-hidden" id="check-beach" type="checkbox" name="beach" checked>
+                <label for="check-beach">Обгорел на пляже</label>
               </li>
               <li class="form__item">
                 <input
@@ -161,15 +143,10 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__text">
-            <legend class="form__label form__label--center">
-              Контактная информация
-            </legend>
+          <fieldset class="form__text form__text--contacts">
+            <legend class="form__label form__label--center">Контактная информация</legend>
             <p>
-              <label class="form__label"
-                for="form-phone">
-                Номер телефона
-              </label><br>
+              <label class="form__label" for="form-phone">Номер телефона</label><br>
               <input
                 class="form__text-input"
                 id="form-phone"
@@ -191,7 +168,7 @@
                 required>
             </p>
           </fieldset>
-          <fieldset class="form__check">
+          <fieldset class="form__check form__check--app">
             <legend class="form__label form__label--center">
               С каким приложением<br>путешествовали?
             </legend>
@@ -235,7 +212,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__text">
+          <fieldset class="form__text form__text--area">
             <legend
               class="form__label form__label--center">
               Опишите свои эмоции
@@ -248,15 +225,10 @@
               </textarea>
             </label>
           </fieldset>
-          <button
-            class="form__button form__button--send button-square button-square--form"
-            type="submit">
-            Отправить форму
-          </button>
-          <p class="form__description">
-            <span class="form__description--accent">* </span>
-            — обязательные поля
-          </p>
+          <div class="form__send">
+            <button class="form__button form__button--send button-square button-square--form" type="submit">Отправить форму</button>
+            <p class="form__description"><span class="form__description--accent">* </span>— обязательные поля</p>
+          </div>
         </form>
       </section>
     </main>
