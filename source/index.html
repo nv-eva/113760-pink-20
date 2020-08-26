@@ -131,7 +131,7 @@
         <h2 class="visually-hidden">Отзывы</h2>
         <div class="reviews__wrapper slider">
           <div class="reviews__list slider__list">
-            <blockquote class="reviews__item slider__item">
+            <blockquote class="reviews__item slider__item slider__item--current">
               <cite class="reviews__author-name">
                 Николай Петров
               </cite>
@@ -146,18 +146,14 @@
               </p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">
-                Автор 2
-              </cite>
+              <cite class="reviews__author-name">Автор 2</cite>
               <p class="reviews__author-description">
                 возраст, профессия
               </p>
               <p class="reviews__text">Текст отзыва 2</p>
             </blockquote>
             <blockquote class="reviews__item slider__item">
-              <cite class="reviews__author-name">
-                Автор 3
-              </cite>
+              <cite class="reviews__author-name">Автор 3</cite>
               <p class="reviews__author-description">
                 возраст, профессия
               </p>
@@ -165,22 +161,14 @@
             </blockquote>
           </div>
           <div class="reviews__toggles slider__toggles">
-            <button
-              class="slider__toggle slider__toggle--current"
-              type="button">
-              1
-            </button>
-            <button
-              class="slider__toggle"
-              type="button">
-              2
-            </button>
-            <button
-              class="slider__toggle"
-              type="button">
-              3
-            </button>
+            <button class="slider__toggle slider__toggle--current" type="button">1</button>
+            <button class="slider__toggle" type="button">2</button>
+            <button class="slider__toggle" type="button">3</button>
           </div>
+          <button class="slider__arrow slider__arrow--prev" type="button">
+            Предыдущий отзыв</button>
+          <button class="slider__arrow slider__arrow--next" type="button">
+            Следующий отзыв</button>
         </div>
       </section>
       <section class="price">
@@ -188,99 +176,82 @@
         <table class="price__list">
           <tr>
             <th class="price__empty price__setting--aside"></th>
-            <th class="price__plan" colspan="2">
+            <th class="price__plan price__item price__item--1 price__item--hidden border-radius-top-left">
               База<br>
               <span class="price__cost">1,99 USD</span>
             </th>
-            <th class="price__plan" colspan="2">
-              <span class="price__hit"> Хит </span>
+            <th class="price__plan price__item price__item--2">
+              <span class="price__hit">Хит</span>
               Стандарт<br>
               <span class="price__cost">3,99 USD</span>
             </th>
-            <th class="price__plan" colspan="2">
+            <th class="price__plan price__item price__item--3 price__item--hidden border-radius-top-right">
               Анлим<br>
               <span class="price__cost">9,99 USD</span>
             </th>
           </tr>
           <tr>
-            <td class="price__setting price__setting--aside">
-              Розовый фильтр
+            <td class="price__setting price__setting--aside border-radius-top-left">Розовый фильтр</td>
+            <td class="price__setting price__item price__item--1 price__item--hidden">Розовый фильтр
+              <span class="price__inclusion price__inclusion--yes">да</span>
             </td>
-            <td class="price__setting">Розовый фильтр</td>
-            <td class="price__inclusion price__inclusion--yes">да</td>
-            <td class="price__setting">Розовый фильтр</td>
-            <td class="price__inclusion price__inclusion--yes">да</td>
-            <td class="price__setting">Розовый фильтр</td>
-            <td class="price__inclusion price__inclusion--yes">да</td>
+            <td class="price__setting price__item price__item--2">Розовый фильтр
+              <span class="price__inclusion price__inclusion--yes">да</span>
+            </td>
+            <td class="price__setting price__item price__item--3 price__item--hidden">Розовый фильтр
+              <span class="price__inclusion price__inclusion--yes">да</span>
+            </td>
           </tr>
           <tr>
-            <td class="price__setting price__setting--aside">
-              Смайлики
+            <td class="price__setting price__setting--aside">Смайлики</td>
+            <td class="price__setting price__item price__item--1 price__item--hidden">Смайлики
+              <span class="price__inclusion price__inclusion--not">нет</span>
             </td>
-            <td class="price__setting">Смайлики</td>
-            <td class="price__inclusion price__inclusion--not">нет</td>
-            <td class="price__setting">Смайлики</td>
-            <td class="price__inclusion price__inclusion--yes">да</td>
-            <td class="price__setting">Смайлики</td>
-            <td class="price__inclusion price__inclusion--yes">да</td>
+            <td class="price__setting price__item price__item--2">Смайлики
+              <span class="price__inclusion price__inclusion--yes">да</span>
+            </td>
+            <td class="price__setting price__item price__item--3 price__item--hidden">Смайлики
+              <span class="price__inclusion price__inclusion--yes">да</span>
+            </td>
           </tr>
           <tr>
-            <td class="price__setting price__setting--aside">
-              Комментарии
+            <td class="price__setting price__setting--aside border-radius-bottom-left">Комментарии</td>
+            <td class="price__setting price__item price__item--1 price__item--hidden">Комментарии
+              <span class="price__inclusion price__inclusion--not">нет</span>
             </td>
-            <td class="price__setting">Комментарии</td>
-            <td class="price__inclusion price__inclusion--not">нет</td>
-            <td class="price__setting">Комментарии</td>
-            <td class="price__inclusion price__inclusion--not">нет</td>
-            <td class="price__setting">Комментарии</td>
-            <td class="price__inclusion price__inclusion--yes">да</td>
+            <td class="price__setting price__item price__item--2">Комментарии
+              <span class="price__inclusion price__inclusion--not">нет</span>
+            </td>
+            <td class="price__setting price__item price__item--3 price__item--hidden border-radius-bottom-right">Комментарии
+              <span class="price__inclusion price__inclusion--yes">да</span>
+            </td>
           </tr>
         </table>
         <div class="price__toggles slider__toggles">
-          <button
-            class="slider__toggle"
-            type="button">
-            1
-          </button>
-          <button
-            class="slider__toggle slider__toggle--current"
-            type="button">
-            2
-          </button>
-          <button
-            class="slider__toggle"
-            type="button">
-            3
-          </button>
+          <button class="slider__toggle" type="button">1</button>
+          <button class="slider__toggle slider__toggle--current" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
         </div>
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__intro">
-          Остались вопросы?<br>Свяжитесь с нами!
-        </p>
-        <p class="contacts__text">
-          <b class="contacts__title">Звоните:</b><br>
-          <a class="contacts__link" href="tel:+78125556666">
-            +7 (812) 555-66-66
-          </a>
-        </p>
-        <p class="contacts__text">
-          <b class="contacts__title">Пишите:</b><br>
-          <a class="contacts__link"
-            href="mailto:mail@htmlacademy.ru" target="_blank">
-            mail@htmlacademy.ru
-          </a>
-        </p>
-        <p class="contacts__text">
-          <b class="contacts__title">Приезжайте в гости:</b><br>
-          ул. Большая Конюшенная, 19/8
-        </p>
+        <p class="contacts__intro">Остались вопросы?<br>Свяжитесь с нами!</p>
+        <div class="contacts__list">
+          <p class="contacts__item">
+            <b class="contacts__title">Звоните:</b><br>
+            <a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+          </p>
+          <p class="contacts__item contacts__item--write">
+            <b class="contacts__title">Пишите:</b><br>
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru" target="_blank">mail@htmlacademy.ru</a>
+          </p>
+          <p class="contacts__item">
+            <b class="contacts__title">Приезжайте в гости:</b><br>
+            ул. Большая Конюшенная, 19/8
+          </p>
+        </div>
         <div class="contacts__map map">
-          <img
-            src="img/bg-map-mobile@1x.png"
-            width="320" height="200"
-            alt="Офис компании по адресу ул. Большая Конюшенная, 19/8">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="200" alt="Офис компании по адресу ул. Большая Конюшенная, 19/8">
         </div>
       </section>
     </main>

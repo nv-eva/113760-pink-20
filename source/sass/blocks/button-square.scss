@@ -1,8 +1,12 @@
 .button-square {
-  display: block;
-  width: 276px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+  max-width: 296px;
   padding-top: 19px;
   padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
