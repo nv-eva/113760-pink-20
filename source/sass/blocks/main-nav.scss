@@ -104,15 +104,16 @@
 
 .main-nav--opened .main-nav__icon::before,
 .main-nav--opened .main-nav__icon::after {
-  width: 72%;
+  width: 65%;
+  height: 3px;
 }
 
 .main-nav--opened .main-nav__icon::before {
-  transform: translate(6px, -2px) rotate(45deg);
+  transform: translate(22px, -1px) rotate(45deg);
 }
 
 .main-nav--opened .main-nav__icon::after {
-  transform: translate(6px, -6px) rotate(-45deg);
+  transform: translate(22px, -4px) rotate(-45deg);
 }
 
 /* Menu button actions */
@@ -157,20 +158,26 @@
 }
 
 .main-nav__item {
-  padding-top: 21px;
-  padding-bottom: 22px;
+  padding-top: 14px;
+  padding-bottom: 16px;
   font-weight: bold;
+  text-transform: uppercase;
   line-height: 32px;
   text-align: center;
   background-color: $basic-dark;
   border-top: 1px solid $extra-light-opacity;
   border-bottom: 1px solid $extra-dark;
 
+  &:first-child {
+    margin-top: 4px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-left: 78px;
     padding-top: 9px;
     padding-bottom: 12px;
     font-weight: normal;
+    text-transform: none;
     line-height: 18px;
     text-align: right;
     background-color: transparent;
@@ -195,7 +202,7 @@
 .main-nav--opened .main-nav__item:first-child::before {
   content: "";
   position: absolute;
-  top: $mobile-menu - 1px;
+  top: 69px;
   display: block;
   width: 100%;
   height: 1px;
@@ -213,6 +220,8 @@
 .main-nav__link {
   color: $extra-light;
   text-decoration: none;
+  padding-right: 21px;
+  padding-left: 20px;
 }
 
 .main-nav__item:not(.main-nav__item--active) .main-nav__link:hover,
