@@ -1,5 +1,6 @@
 .reviews {
   background-color: $extra-light;
+  padding-bottom: 37px;
 }
 
 .reviews__item {
@@ -8,7 +9,7 @@
   flex-wrap: wrap;
   max-width: 700px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 41px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
@@ -61,6 +62,7 @@
 }
 
 .reviews__text {
+  margin-top: 13px;
   font-size: 14px;
 
   @media (min-width: $tablet-width) {
