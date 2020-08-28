@@ -160,7 +160,7 @@
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    width: 790px;
+    width: 750px;
     padding-top: 18px;
     padding-bottom: 18px;
   }
@@ -188,9 +188,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-right: 1px;
     margin-left: 78px;
-    padding-top: 9px;
+    padding-top: 10px;
     padding-bottom: 12px;
+    padding-right: 0;
+    padding-left: 0;
     font-weight: normal;
     text-transform: none;
     line-height: 18px;
@@ -204,8 +207,8 @@
       &::after {
         content: "";
         position: absolute;
+        bottom: -1px;
         right: 0;
-        bottom: 1px;
         left: 0;
         height: 2px;
         background: $extra-light;
@@ -240,6 +243,11 @@
 
   @media (min-width: $tablet-width) {
     padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
