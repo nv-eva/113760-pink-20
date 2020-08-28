@@ -185,6 +185,10 @@
     &:first-child {
       margin-top: 0;
     }
+
+    &:last-child {
+      margin-bottom: -1px;
+    }
   }
 
   @media (min-width: $desktop-width) {
