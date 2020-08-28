@@ -50,7 +50,7 @@
 
   @media (min-width: $tablet-width) {
     min-height: 150px;
-    margin-top: $tablet-menu +81px;
+    margin-top: calc($tablet-menu + 81px);
     margin-bottom: 74px;
     margin-right: 118px;
     margin-left: 118px;
@@ -61,36 +61,39 @@
   @media (min-width: $desktop-width) {
     display: block;
     width: 820px;
-    margin-top: $tablet-menu +74px;
+    margin-top: calc($tablet-menu + 74px);
     margin-bottom: 104px;
     margin-right: auto;
     margin-left: auto;
   }
 
   &--index {
-    margin-top: $tablet-menu +30px;
-    margin-bottom: 33px;
-    line-height: 1.2;
+    margin-top: $tablet-menu - 21px;
+    margin-bottom: 5px;
+    line-height: 29px;
 
     @media (min-width: $tablet-width) {
       grid-column-start: 1;
       grid-column-end: 2;
       grid-row-start: 1;
       grid-row-end: 2;
-      margin-top: $tablet-menu +102px;
+      margin-top: $tablet-menu + 94px;
       margin-bottom: 0;
       margin-right: 20px;
       margin-left: 20px;
       font-size: 40px;
+      line-height: 48px;
     }
 
     @media (min-width: $desktop-width) {
       grid-column-start: 2;
       grid-column-end: 3;
       width: 300px;
+      margin-top: 209px;
       margin-right: 0;
       margin-left: 0;
       font-size: 50px;
+      line-height: 68px;
     }
   }
 }
@@ -101,7 +104,7 @@
   grid-row-start: 2;
   grid-row-end: 3;
   margin: 0 auto;
-  transform: translateX(-39px);
+  transform: translateX(-31px);
 
   @media (min-width: $tablet-width) {
     grid-column-start: 1;
@@ -120,6 +123,7 @@
     position: relative;
     margin: 0 auto;
     margin-top: auto;
+    transform: translateX(12px);
   }
 }
 
