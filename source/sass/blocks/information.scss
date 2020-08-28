@@ -1,5 +1,6 @@
 /* Intro */
 .information {
+  display: grid;
   padding-top: 40px;
   background-color: $extra-light;
 
@@ -20,6 +21,8 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
+  background-color: transparent;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 0;
@@ -42,9 +45,9 @@
 
 /* Information List */
 .information__list {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  position: relative;
   margin: 0;
   padding-top: 64px;
   padding-right: 20px;
@@ -68,17 +71,22 @@
 
   &::before {
     content: "";
-    width: 100%;
-    height: 600px;
     position: absolute;
-    top: 0;
+    top: -29px;
     left: 0;
-    background-image: url("../img/bg-triangle-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: top right;
+    width: 100%;
+    height: 90px;
+    background-color: $extra-light;
+    background: linear-gradient(-5.7deg, $basic-light 50%, $extra-light 50%);
 
     @media (min-width: $tablet-width) {
-      background-image: url("../img/bg-triangle.svg");
+      top: -50px;
+      background: linear-gradient(-4.7deg, $basic-light 50%, $extra-light 50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -370px;
+      height: 900px;
     }
   }
 }
