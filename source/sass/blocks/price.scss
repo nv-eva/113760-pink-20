@@ -2,9 +2,9 @@
   position: relative;
   display: grid;
   padding-top: 60px;
-  padding-bottom: 49px;
+  padding-bottom: 44px;
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 21px;
   background-color: $basic-light;
 
   @media (min-width: $tablet-width) {
@@ -36,6 +36,7 @@
 .price__list {
   width: 100%;
   box-sizing: padding-box;
+  margin-top: 41px;
   margin-bottom: 45px;
   font-size: 14px;
   text-transform: uppercase;
@@ -51,8 +52,10 @@
 /* Table header */
 .price__plan {
   position: relative;
-  padding-top: 18px;
-  padding-bottom: 35px;
+  padding-top: 12px;
+  padding-bottom: 29px;
+  padding-right: 20px;
+  padding-left: 22px;
   font-weight: bold;
   font-size: 16px;
   text-align: center;
@@ -67,18 +70,22 @@
 }
 
 .price__cost {
+  display: block;
+  margin-top: -3px;
   font-weight: 300;
   font-size: 18px;
 }
 
 .price__hit {
   position: absolute;
-  left: -30px;
+  top: 18px;
+  left: -36px;
   display: block;
   padding-right: 50px;
   padding-left: 50px;
   font-weight: normal;
   font-size: 14px;
+  line-height: 23px;
   background-color: $accent-color;
   transform: rotate(-45deg);
   z-index: 100;
@@ -87,12 +94,13 @@
 /* Table content */
 .price__setting {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 14px;
+  padding-bottom: 15px;
   padding-right: 10px;
   padding-left: 20px;
   text-align: left;
   background-color: $extra-light;
+  border-right: 2px solid $medium-1;
   border-left: 2px solid $medium-1;
   border-bottom: 2px solid $medium-1;
 
@@ -126,23 +134,23 @@
   position: absolute;
   display: block;
   font-size: 0;
-  outline-width: 2px;
-  outline-style: solid;
+  background-size: 100%;
+  background-repeat: no-repeat;
 
   &--yes {
-    width: 31px;
-    height: 21px;
+    width: 30px;
+    height: 22px;
     right: 17px;
-    top: 23px;
-    outline-color: green;
+    top: 18px;
+    background-image: url("../img/icon-yes.svg");
   }
 
   &--not {
     width: 27px;
     height: 27px;
-    right: 20px;
-    top: 20px;
-    outline-color: red;
+    right: 19px;
+    top: 16px;
+    background-image: url("../img/icon-no.svg");
   }
 
   @media (min-width: $tablet-width) {
