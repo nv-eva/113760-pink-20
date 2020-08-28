@@ -44,15 +44,13 @@
   border-radius: 50%;
 
   &:last-child {
-    margin-right: 4px;
+    margin-right: 0;
   }
 
   &--current {
     box-sizing: content-box;
-    margin-top: -3px;
-    margin-right: 16px;
     background-color: $extra-light;
-    border: 3px solid $basic-dark;
+    box-shadow: 0 0 0 3px $basic-dark;
     opacity: 1;
   }
 
