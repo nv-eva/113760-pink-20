@@ -32,17 +32,6 @@
   background-color: transparent;
   border-color: $extra-light;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-    background-color: $extra-light;
-  }
-
-  &:active {
-    color: $accent-color-opacity;
-    background-color: $extra-light;
-  }
-
   @media (min-width: $tablet-width) {
     width: 290px;
     margin-top: 27px;
@@ -52,6 +41,17 @@
     margin-top: 39px;
     padding-top: 16px;
     font-size: 21px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    background-color: $extra-light;
+  }
+
+  &:active {
+    color: $accent-color-opacity;
+    background-color: $extra-light;
   }
 }
 

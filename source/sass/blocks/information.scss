@@ -86,6 +86,7 @@
     @media (min-width: $desktop-width) {
       top: -370px;
       height: 900px;
+      background: linear-gradient(-4.7deg, $basic-light 50%, $extra-light 50%, $extra-light 75%, transparent 75%);
     }
   }
 }
