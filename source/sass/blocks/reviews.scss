@@ -29,6 +29,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
+    padding-bottom: 0;
 
     &::before {
       content: "";
@@ -74,7 +75,8 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 2px;
-    margin-bottom: 12px;
+    margin-bottom: -30px;
+    padding-bottom: 0;
     font-size: 18px;
   }
 }
