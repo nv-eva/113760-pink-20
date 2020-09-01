@@ -30,7 +30,7 @@
   color: $extra-light;
   text-decoration: none;
   background-color: transparent;
-  border-color: $extra-light;
+  box-shadow: 0 0 0 3px $extra-light;
 
   @media (min-width: $tablet-width) {
     width: 290px;
