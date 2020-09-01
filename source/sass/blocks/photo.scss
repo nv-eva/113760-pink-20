@@ -19,8 +19,10 @@
 
   @media (min-width: $tablet-width) {
     max-width: 580px;
-    padding-right: 102px;
-    padding-left: 102px;
+    padding-top: 91px;
+    padding-bottom: 77px;
+    padding-right: 70px;
+    padding-left: 70px;
     font-size: 18px;
   }
 
@@ -58,6 +60,8 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
     background-color: $basic-light;
   }
 
@@ -78,21 +82,51 @@
 .photo__image {
   width: 100%;
   margin-bottom: -7px;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 300px;
+  }
+
+  &--top {
+    @media (min-width: $tablet-width) {
+      height: 509px;
+    }
+  }
 }
 
+/* Photo Text */
 .photo__text {
+  position: relative;
   display: block;
   padding-top: 18px;
   padding-bottom: 18px;
   padding-right: 10px;
   padding-left: 17px;
   background-color: $basic-light;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 108px;
+    padding-top: 23px;
+    padding-bottom: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
 .photo__item--top .photo__text {
   position: relative;
   margin-right: 20px;
   margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+    padding-bottom: 14px;
+  }
 
   @media (min-width: $desktop-width) {
     max-width: $desktop-width-min - 38px;
@@ -123,7 +157,6 @@
 }
 
 .photo__likes {
-  position: relative;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 32px;
@@ -131,23 +164,57 @@
   font-size: 12px;
   color: $accent-color;
 
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    margin-left: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 5px;
-    left: -32px;
+    bottom: 25px;
+    left: 17px;
     display: block;
     width: 13px;
     height: 12px;
     background-image: url("../img/heart.svg");
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      display: block;
+      width: 13px;
+      height: 12px;
+      background-image: url("../img/heart.svg");
+    }
   }
 }
 
 .photo__item--top .photo__likes {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 8px;
-    right: 60px;
+    top: 25px;
+    right: 59px;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      display: block;
+      left: 105px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
