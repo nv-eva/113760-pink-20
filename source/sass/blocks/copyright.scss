@@ -4,6 +4,11 @@
   margin-right: 10px;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+    font-size: 18px;
+  }
 }
 
 .copyright__link .copyright__icon {

@@ -27,6 +27,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 90px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -66,7 +67,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 
   &--top {
@@ -88,9 +89,17 @@
     height: 300px;
   }
 
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
+
   &--top {
     @media (min-width: $tablet-width) {
       height: 509px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 506px;
     }
   }
 }
@@ -116,6 +125,12 @@
     padding-right: 30px;
     padding-left: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 23px;
+    padding-right: 27px;
+    padding-left: 27px;
+  }
 }
 
 .photo__item--top .photo__text {
@@ -129,8 +144,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width-min - 38px;
+    width: $desktop-width-min;
+    box-sizing: border-box;
     margin: 0 auto;
+    padding-bottom: 12px;
   }
 }
 
@@ -154,6 +171,10 @@
   margin: 0;
   padding: 0;
   padding-bottom: 11px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 12px;
+  }
 }
 
 .photo__likes {
@@ -194,6 +215,11 @@
       width: 13px;
       height: 12px;
       background-image: url("../img/heart.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: 29px;
+      right: 31px;
     }
   }
 }
@@ -242,6 +268,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 54px;
+    top: 53px;
+    right: 50%;
+    transform: translateX(470px);
   }
 }
