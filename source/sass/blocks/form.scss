@@ -104,6 +104,7 @@
 
 /* Text fieldset */
 .form__text {
+  padding-bottom: 9px;
   background-color: $extra-light;
 
   &--area {
@@ -154,9 +155,13 @@
   }
 }
 
+.form__text input {
+  margin-bottom: -3px;
+  padding-left: 20px;
+}
+
 /* Name */
 .form__text--name {
-  padding-bottom: 9px;
   border: none;
 
   @media (min-width: $tablet-width) {
@@ -189,9 +194,6 @@
 }
 
 .form__text--name input {
-  margin-bottom: -3px;
-  padding-left: 20px;
-
   @media (min-width: $tablet-width) {
     flex-grow: 1;
     margin: 0;
@@ -199,15 +201,9 @@
 }
 
 /* Contacts */
-.form__contacts-list {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
 .form__text--contacts {
+  padding-top: 12px;
+
   @media (min-width: $tablet-width) {
     order: -1;
   }
@@ -217,6 +213,14 @@
     grid-column-end: 4;
     padding-right: 60px;
     padding-left: 60px;
+  }
+}
+
+.form__contacts-list {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
@@ -238,6 +242,8 @@
 }
 
 .form__text--contacts .form__label {
+  margin-left: 24px;
+
   @media (min-width: $tablet-width) {
     margin-top: 10px;
     order: 2;
@@ -248,6 +254,10 @@
   }
 }
 
+.form__text--contacts .form__label--center {
+  display: none;
+}
+
 .form__text--contacts input {
   @media (min-width: $desktop-width) {
     width: 100%;
@@ -256,7 +266,7 @@
 
 /* Check fieldset */
 .form__check {
-  padding-bottom: 40px;
+  padding-bottom: 0;
   background-color: $basic-light;
 
   @media (min-width: $tablet-width) {
@@ -311,6 +321,10 @@
 .form__check--progress .form__item {
   margin-bottom: 52px;
   padding-left: 59px;
+
+  &:last-child {
+    margin-bottom: 47px;
+  }
 }
 
 .form__check--progress .form__item:nth-child(2n) {
@@ -327,8 +341,19 @@
   width: 35px;
   height: 35px;
   background-color: $extra-light;
-  border: 2px solid $medium-1;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $medium-1;
   border-radius: 3px;
+}
+
+.form__check-input:hover + label::before,
+.form__check-input:focus + label::before {
+  border-color: $basic-dark;
+}
+
+.form__check-input:active + label::before {
+  border-color: $accent-color;
 }
 
 .form__check-input:checked + label::after{
@@ -340,6 +365,54 @@
   height: 16px;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
+}
+
+/* App */
+.form__check--app .form__item {
+  margin-bottom: 45px;
+  padding-left: 70px;
+
+  &:first-child {
+    margin-top: -2px;
+  }
+
+  &:last-child {
+    margin-bottom: 46px;
+  }
+}
+
+.form__radio-input + label::before {
+  content: "";
+  position: absolute;
+  left: -70px;
+  top: -5px;
+  width: 37px;
+  height: 37px;
+  background-color: $extra-light;
+  border-width: 2px;
+  border-style: solid;
+  border-color: $medium-1;
+  border-radius: 50%;
+}
+
+.form__radio-input:hover + label::before,
+.form__radio-input:focus + label::before {
+  border-color: $basic-dark;
+}
+
+.form__radio-input:active + label::before {
+  border-color: $accent-color;
+}
+
+.form__radio-input:checked + label::after{
+  content: "";
+  position: absolute;
+  left: -57px;
+  top: 8px;
+  width: 15px;
+  height: 15px;
+  background-color: $accent-color;
+  border-radius: 50%;
 }
 
 /* Send button */
