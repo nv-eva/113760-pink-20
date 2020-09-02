@@ -44,12 +44,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 20px 1fr 20px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: auto 470px 470px auto;
     justify-content: center;
+    margin-bottom: -10px;
   }
 }
 
@@ -421,6 +423,8 @@
 .form__check--progress .form__list {
   @media (min-width: $tablet-width) {
     margin-top: -2px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -428,7 +432,6 @@
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     padding-right: 40px;
-    padding-left: 20px;
   }
 }
 
@@ -489,7 +492,7 @@
   border-color: $accent-color;
 }
 
-.form__check-input:checked + label::after{
+.form__check-input:checked + label::after {
   content: "";
   position: absolute;
   left: -50px;
@@ -527,6 +530,10 @@
 
     @media (min-width: $tablet-width) {
       margin-top: 0;
+      margin-bottom: 58px;
+    }
+
+    @media (min-width: $desktop-width) {
       margin-bottom: 0;
     }
   }
@@ -563,7 +570,7 @@
   border-color: $accent-color;
 }
 
-.form__radio-input:checked + label::after{
+.form__radio-input:checked + label::after {
   content: "";
   position: absolute;
   left: -57px;
