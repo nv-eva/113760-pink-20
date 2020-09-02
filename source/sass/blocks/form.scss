@@ -48,7 +48,6 @@
 .form__text,
 .form__check {
   margin: 0;
-  margin-bottom: -70px;
   padding-right: 20px;
   padding-left: 20px;
   border: none;
@@ -76,11 +75,12 @@
   color: $accent-color;
 
   &--center {
-    padding-top: 124px;
+    margin-bottom: 92px;
     padding-right: 10px;
     padding-left: 10px;
     text-align: center;
     line-height: 18px;
+    transform: translateY(57px);
 
     @media (min-width: $tablet-width) {
       padding-top: 0;
@@ -106,19 +106,6 @@
 .form__text {
   background-color: $extra-light;
 
-  &--contacts {
-    @media (min-width: $tablet-width) {
-      order: -1;
-    }
-
-    @media (min-width: $desktop-width) {
-      grid-column-start: 2;
-      grid-column-end: 4;
-      padding-right: 60px;
-      padding-left: 60px;
-    }
-  }
-
   &--area {
     @media (max-width: $mobile-only-width) {
       margin-bottom: 10px;
@@ -136,8 +123,8 @@
 .form__text-input {
   width: 100%;
   margin-top: 5px;
-  padding-top: 15px;
-  padding-bottom: 14px;
+  padding-top: 14px;
+  padding-bottom: 15px;
   padding-right: 42px;
   padding-left: 42px;
   box-sizing: border-box;
@@ -167,7 +154,9 @@
   }
 }
 
+/* Name */
 .form__text--name {
+  padding-bottom: 9px;
   border: none;
 
   @media (min-width: $tablet-width) {
@@ -209,11 +198,25 @@
   }
 }
 
+/* Contacts */
 .form__contacts-list {
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+
+.form__text--contacts {
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-right: 60px;
+    padding-left: 60px;
   }
 }
 
@@ -281,12 +284,20 @@
   }
 }
 
+.form__item label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
 .form__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* Progress */
 .form__check--progress .form__list {
   @media (min-width: $desktop-width) {
     display: grid;
@@ -297,10 +308,38 @@
   }
 }
 
+.form__check--progress .form__item {
+  margin-bottom: 52px;
+  padding-left: 59px;
+}
+
 .form__check--progress .form__item:nth-child(2n) {
   @media (min-width: $desktop-width) {
     order: 1;
   }
+}
+
+.form__check-input + label::before {
+  content: "";
+  position: absolute;
+  left: -59px;
+  top: -4px;
+  width: 35px;
+  height: 35px;
+  background-color: $extra-light;
+  border: 2px solid $medium-1;
+  border-radius: 3px;
+}
+
+.form__check-input:checked + label::after{
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 7px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
 }
 
 /* Send button */
