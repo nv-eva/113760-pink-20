@@ -106,19 +106,6 @@
 .form__text {
   padding-bottom: 9px;
   background-color: $extra-light;
-
-  &--area {
-    @media (max-width: $mobile-only-width) {
-      margin-bottom: 10px;
-    }
-
-    @media (min-width: $desktop-width) {
-      grid-column-start: 2;
-      grid-column-end: 4;
-      padding-right: 60px;
-      padding-left: 60px;
-    }
-  }
 }
 
 .form__text-input {
@@ -135,10 +122,6 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
-  }
-
-  &--textarea {
-    width: 100%;
   }
 
   &:hover {
@@ -262,6 +245,33 @@
   @media (min-width: $desktop-width) {
     width: 100%;
   }
+}
+
+/* Message */
+.form_text--area {
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+.form__text--area .form__label--center {
+  margin-bottom: 43px;
+  transform: translateY(38px);
+}
+
+.form__text-input--textarea {
+  margin-bottom: 31px;
+  padding-top: 13px;
+  padding-bottom: 34px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 /* Check fieldset */
