@@ -152,6 +152,10 @@
   }
 }
 
+.form__text-input--error {
+  border-color: $color-not;
+}
+
 .form__text input {
   margin-bottom: -3px;
   padding-left: 20px;
