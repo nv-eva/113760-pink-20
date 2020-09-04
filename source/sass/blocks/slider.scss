@@ -42,16 +42,10 @@
   opacity: 0.3;
   border: none;
   border-radius: 50%;
+  box-shadow: none;
 
   &:last-child {
     margin-right: 0;
-  }
-
-  &--current {
-    box-sizing: content-box;
-    background-color: $extra-light;
-    box-shadow: 0 0 0 3px $basic-dark;
-    opacity: 1;
   }
 
   &:not(.slider__toggle--current):hover,
@@ -62,6 +56,13 @@
   &:not(.slider__toggle--current):active {
     opacity: 0.1;
   }
+}
+
+.slider__toggle--current {
+  box-sizing: content-box;
+  background-color: $extra-light;
+  box-shadow: 0 0 0 3px $basic-dark;
+  opacity: 1;
 }
 
 /* Arrow */

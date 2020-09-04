@@ -75,10 +75,6 @@
   border-right: 2px solid $basic-light;
   overflow: hidden;
 
-  &:last-child {
-    border: none;
-  }
-
   @media (min-width: $tablet-width) {
     padding-bottom: 10px;
     padding-left: 18px;
