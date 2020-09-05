@@ -102,6 +102,7 @@
 
 /* Hand */
 .intro-page__hand {
+  position: relative;
   grid-area: hand-img;
   grid-row-start: 2;
   grid-row-end: 3;
@@ -144,14 +145,28 @@
   background-size: cover;
   z-index: -1;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablet-width) {
     grid-column-start: 1;
     grid-column-end: 3;
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $tablet-width) {
     grid-column-start: 1;
     grid-column-end: 5;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: center center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
   }
 }
