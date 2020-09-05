@@ -7,22 +7,27 @@
 /* Intro */
 .photo__intro {
   display: flex;
+  width: 100%;
   max-width: 450px;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding-top: 54px;
-  padding-bottom: 54px;
-  padding-right: 42px;
-  padding-left: 42px;
+  padding-top: 44px;
+  padding-bottom: 50px;
+  padding-right: 36px;
+  padding-left: 36px;
   line-height: 30px;
 
   @media (min-width: $tablet-width) {
     max-width: 580px;
-    padding-right: 102px;
-    padding-left: 102px;
+    padding-top: 91px;
+    padding-bottom: 77px;
+    padding-right: 70px;
+    padding-left: 70px;
     font-size: 18px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 90px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -56,11 +61,13 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
     background-color: $basic-light;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 53px;
   }
 
   &--top {
@@ -76,15 +83,54 @@
 .photo__image {
   width: 100%;
   margin-bottom: -7px;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 400px;
+  }
+
+  &--top {
+    @media (min-width: $tablet-width) {
+      height: 509px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 506px;
+    }
+  }
 }
 
+/* Photo Text */
 .photo__text {
+  position: relative;
   display: block;
   padding-top: 18px;
-  padding-bottom: 20px;
-  padding-right: 20px;
+  padding-bottom: 18px;
+  padding-right: 10px;
   padding-left: 17px;
   background-color: $basic-light;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 108px;
+    padding-top: 23px;
+    padding-bottom: 24px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 23px;
+    padding-right: 27px;
+    padding-left: 27px;
+  }
 }
 
 .photo__item--top .photo__text {
@@ -92,34 +138,109 @@
   margin-right: 20px;
   margin-left: 20px;
 
+  @media (min-width: $tablet-width) {
+    min-height: 50px;
+    padding-bottom: 14px;
+  }
+
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width-min - 38px;
+    width: $desktop-width-min;
+    box-sizing: border-box;
     margin: 0 auto;
+    padding-bottom: 12px;
   }
 }
 
 .photo__author {
   margin: 0;
+  padding: 0;
   font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .photo__date {
+  margin: 0;
+  padding: 0;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 12px;
 }
 
+.photo__description {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 11px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 12px;
+  }
+}
+
 .photo__likes {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 32px;
   text-transform: uppercase;
   font-size: 12px;
   color: $accent-color;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    margin-left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    left: 17px;
+    display: block;
+    width: 13px;
+    height: 12px;
+    background-image: url("../img/heart.svg");
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      display: block;
+      width: 13px;
+      height: 12px;
+      background-image: url("../img/heart.svg");
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: 29px;
+      right: 31px;
+    }
+  }
 }
 
 .photo__item--top .photo__likes {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 8px;
-    right: 60px;
+    top: 25px;
+    right: 59px;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      display: block;
+      left: 105px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -147,6 +268,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 54px;
+    top: 53px;
+    right: 50%;
+    transform: translateX(470px);
   }
 }

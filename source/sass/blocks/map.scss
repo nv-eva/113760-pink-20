@@ -1,3 +1,50 @@
+.map {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 502px;
+  }
+}
+
 .map img {
   width: 100%;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 233px;
+  border: 0;
+
+  @media (min-width: $tablet-width) {
+    height: 435px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 606px;
+  }
+}
+
+.map__triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: $extra-light;
+  z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    height: 102px;
+  }
 }

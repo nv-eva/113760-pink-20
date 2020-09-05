@@ -1,5 +1,14 @@
 .reviews {
   background-color: $extra-light;
+  padding-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .reviews__item {
@@ -8,23 +17,29 @@
   flex-wrap: wrap;
   max-width: 700px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 41px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
   text-align: center;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 27px;
+  }
+
   @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+
     &::before {
       content: "";
       display: block;
       width: 79px;
       height: 63px;
       margin: 0 auto;
-      margin-top: 20px;
-      margin-bottom: 30px;
-      outline: 2px solid $accent-color;
-      outline-offset: -2px;
+      margin-top: 71px;
+      margin-bottom: 37px;
+      background-image: url("../img/icon-quotes.svg");
     }
   }
 }
@@ -35,12 +50,13 @@
   color: $extra-dark;
 
   @media (min-width: $tablet-width) {
-    margin-top: 20px;
-    order: 2;
+    margin-top: 18px;
     font-size: 20px;
+    order: 2;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 18px;
     font-size: 24px;
   }
 }
@@ -51,16 +67,22 @@
   @media (min-width: $tablet-width) {
     display: block;
     margin: 0;
+    margin-top: -1px;
+    margin-bottom: 19px;
     order: 2;
     font-size: 14px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 2px;
+    margin-bottom: -30px;
+    padding-bottom: 0;
     font-size: 18px;
   }
 }
 
 .reviews__text {
+  margin-top: 13px;
   font-size: 14px;
 
   @media (min-width: $tablet-width) {

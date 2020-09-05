@@ -11,9 +11,10 @@
   display: flex;
   top: 22px;
   left: 20px;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
-    top: 30px;
+    top: 27px;
   }
 
   @media (min-width: $desktop-width) {
