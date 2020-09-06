@@ -1,0 +1,110 @@
+/* Mobile */
+.logo__mobile {
+  display: block;
+
+  &--page-header {
+    fill: $extra-light;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 17px;
+      left: 71.5px;
+    }
+  }
+
+  &--page-footer {
+    position: absolute;
+    top: 17px;
+    left: 71.5px;
+    fill: $basic-dark;
+  }
+}
+
+/* Tablet */
+.logo__tablet {
+  display: none;
+
+  &--page-header {
+    fill: $extra-light;
+  }
+
+  &--page-footer {
+    display: block;
+    fill: $accent-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+/* Desktop */
+.logo__desktop {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.logo__desktop--page-header .logo__desktop--path {
+  fill: $extra-light;
+}
+
+.logo__desktop--page-footer .logo__desktop--path,
+.logo__desktop--page-footer .logo__desktop--i,
+.logo__desktop--page-header .logo__desktop--i,
+.logo__desktop--page-header .logo__desktop--x {
+  fill: $accent-color;
+}
+
+.logo__desktop--page-footer .logo__desktop--x {
+  fill: $basic-dark;
+}
+
+/* Hover */
+.page-header__logo:not(.page-header__logo--active):hover .logo__mobile,
+.page-header__logo:not(.page-header__logo--active):focus .logo__mobile,
+.page-header__logo:not(.page-header__logo--active):hover .logo__tablet,
+.page-header__logo:not(.page-header__logo--active):focus .logo__tablet,
+.page-header__logo:not(.page-header__logo--active):hover .logo__desktop--path,
+.page-header__logo:not(.page-header__logo--active):focus .logo__desktop--path,
+.page-footer__logo:hover .logo__mobile,
+.page-footer__logo:focus .logo__mobile,
+.page-footer__logo:hover .logo__desktop--x,
+.page-footer__logo:focus .logo__desktop--x {
+  fill: $accent-color;
+}
+
+/* Active */
+.page-header__logo:not(.page-header__logo--active):active .logo__mobile,
+.page-header__logo:not(.page-header__logo--active):active .logo__tablet {
+  fill: $extra-light;
+  opacity: 0.3;
+}
+
+.page-footer__logo:active .logo__mobile,
+.page-footer__logo:focus .logo__desktop--x {
+  fill: $basic-dark;
+  opacity: 0.3;
+}
+
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop--x,
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop--i,
+.page-footer__logo:active .logo__tablet,
+.page-footer__logo:active .logo__desktop--i {
+  opacity: 0.3;
+}
+
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop--path {
+  fill: $extra-light;
+  opacity: 0.5;
+}
+
+.page-footer__logo:active .logo__desktop--path {
+  opacity: 0.5;
+}
