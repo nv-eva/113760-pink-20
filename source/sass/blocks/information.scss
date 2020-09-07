@@ -181,9 +181,14 @@
   height: 276px;
   margin: 0 auto;
   margin-top: 29px;
-  background-repeat: no-repeat;
   background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 1;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+  }
 
   @media (min-width: $tablet-width) {
     grid-column-start: 1;
@@ -193,8 +198,11 @@
     width: 268px;
     height: 482px;
     margin-top: -28px;
-    background-image: url("../img/iphone-screen-3-tablet@1x.png");
     transform: translateX(-5px);
+    animation-name: iphone-screen;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   @media (min-width: $desktop-width) {
@@ -207,6 +215,7 @@
   width: 300px;
   height: 310px;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-width: $desktop-width) {
     display: block;
@@ -216,14 +225,61 @@
 .information__item--mood::before {
   background-image: url("../img/iphone-screen-1-desktop@1x.png");
   transform: translateX(4px);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/iphone-screen-1-desktop@2x.png");
+  }
 }
 
 .information__item--changes::before {
   background-image: url("../img/iphone-screen-2-desktop@1x.png");
   transform: translateX(7px);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/iphone-screen-2-desktop@2x.png");
+  }
 }
 
 .information__item--friends::before {
   background-image: url("../img/iphone-screen-3-desktop@1x.png");
   transform: translateX(10px);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/iphone-screen-3-desktop@2x.png");
+  }
+}
+
+/* Animation */
+@keyframes iphone-screen {
+  0% {
+    background-image: url("../img/iphone-screen-1-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone-screen-1-tablet@2x.png");
+    }
+  }
+
+  33% {
+    background-image: url("../img/iphone-screen-2-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone-screen-2-tablet@2x.png");
+    }
+  }
+
+  66% {
+    background-image: url("../img/iphone-screen-3-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+    }
+  }
+
+  100% {
+    background-image: url("../img/iphone-screen-1-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/iphone-screen-1-tablet@2x.png");
+    }
+  }
 }

@@ -50,22 +50,26 @@
   }
 }
 
-.upload__photo {
+.upload__photo--wrapper {
   grid-column-start: 2;
   grid-column-end: 3;
   width: 100%;
+  margin-bottom: -8px;
 
   @media (min-width: $tablet-width) {
     grid-row-start: 1;
     grid-row-end: 3;
     box-sizing: border-box;
-    margin-bottom: -1px;
     padding-right: 10px;
   }
 
   @media (min-width: $desktop-width) {
     padding-right: 90px;
   }
+}
+
+.upload__photo {
+  width: 100%;
 }
 
 /* Tools */
