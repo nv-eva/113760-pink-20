@@ -198,7 +198,7 @@
     height: 22px;
     right: 17px;
     top: 18px;
-    background-image: url("../img/icon-yes.svg");
+    background-image: url("../img/sprite-yes.svg");
   }
 
   &--not {
@@ -206,7 +206,7 @@
     height: 27px;
     right: 19px;
     top: 16px;
-    background-image: url("../img/icon-no.svg");
+    background-image: url("../img/sprite-no.svg");
   }
 
   @media (min-width: $tablet-width) {
