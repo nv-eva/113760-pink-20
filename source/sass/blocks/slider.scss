@@ -86,14 +86,14 @@
       grid-column-start: 1;
       grid-column-end: 2;
       margin-right: 78px;
-      background-image: url("../img/icon-review-arrow-left.svg");
+      background-image: url("../img/sprite-arrow-left.svg");
     }
 
     &--next {
       grid-column-start: 3;
       grid-column-end: 4;
       margin-left: 78px;
-      background-image: url("../img/icon-review-arrow-right.svg");
+      background-image: url("../img/sprite-arrow-right.svg");
     }
   }
 

@@ -52,17 +52,17 @@
   background-repeat: no-repeat;
 
   &--twitter {
-    background-image: url("../img/twitter.svg");
+    background-image: url("../img/sprite-twitter.svg");
     background-position: center 17px;
   }
 
   &--facebook {
-    background-image: url("../img/facebook.svg");
+    background-image: url("../img/sprite-facebook.svg");
     background-position: center 15px;
   }
 
   &--youtube {
-    background-image: url("../img/youtube.svg");
+    background-image: url("../img/sprite-youtube.svg");
     background-position: 19px 18px;
   }
 }
