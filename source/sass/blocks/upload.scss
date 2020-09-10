@@ -197,7 +197,7 @@
       left: 4px;
       width: 22px;
       height: 22px;
-      background-image: url("../img/sprite-crop.svg");
+      background-image: url("../img/icon-crop.svg");
     }
 
     &--fill::before {
@@ -205,7 +205,7 @@
       left: 3px;
       width: 25px;
       height: 22px;
-      background-image: url("../img/sprite-fill.svg");
+      background-image: url("../img/icon-fill.svg");
     }
 
     &--contrast::before {
@@ -213,7 +213,7 @@
       left: 7px;
       width: 16px;
       height: 16px;
-      background-image: url("../img/sprite-contrast.svg");
+      background-image: url("../img/icon-contrast.svg");
     }
 
     &::after {
