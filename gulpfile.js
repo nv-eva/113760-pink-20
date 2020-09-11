@@ -12,6 +12,9 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const uglify = require("gulp-uglify");
 
 // Styles
 
@@ -67,6 +70,29 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+// HTML
+
+const htmlmini = () => {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"))
+}
+
+exports.htmlmini = htmlmini;
+
+// JS
+
+const jsmini = () => {
+  return gulp.src("source/js/**/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
+};
+
+exports.jsmini = jsmini;
+
 // Clean
 
 const clean = () => {
@@ -91,20 +117,10 @@ const copy = () => {
 
 exports.copy = copy;
 
-// HTML
-
-const htmlmini = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"))
-}
-
-exports.htmlmini = htmlmini;
-
 // Build
 
 const build = gulp.series(
-  clean, copy, styles, sprite, htmlmini
+  clean, copy, styles, sprite, htmlmini, jsmini
 );
 
 exports.build = build;
