@@ -51,18 +51,18 @@
   }
 }
 
-.logo__desktop--page-header .logo__desktop--path {
+.logo__desktop--page-header .logo__desktop-path {
   fill: $extra-light;
 }
 
-.logo__desktop--page-footer .logo__desktop--path,
-.logo__desktop--page-footer .logo__desktop--i,
-.logo__desktop--page-header .logo__desktop--i,
-.logo__desktop--page-header .logo__desktop--x {
+.logo__desktop--page-footer .logo__desktop-path,
+.logo__desktop--page-footer .logo__desktop-i,
+.logo__desktop--page-header .logo__desktop-i,
+.logo__desktop--page-header .logo__desktop-x {
   fill: $accent-color;
 }
 
-.logo__desktop--page-footer .logo__desktop--x {
+.logo__desktop--page-footer .logo__desktop-x {
   fill: $basic-dark;
 }
 
@@ -71,12 +71,12 @@
 .page-header__logo:not(.page-header__logo--active):focus .logo__mobile,
 .page-header__logo:not(.page-header__logo--active):hover .logo__tablet,
 .page-header__logo:not(.page-header__logo--active):focus .logo__tablet,
-.page-header__logo:not(.page-header__logo--active):hover .logo__desktop--path,
-.page-header__logo:not(.page-header__logo--active):focus .logo__desktop--path,
+.page-header__logo:not(.page-header__logo--active):hover .logo__desktop-path,
+.page-header__logo:not(.page-header__logo--active):focus .logo__desktop-path,
 .page-footer__logo:hover .logo__mobile,
 .page-footer__logo:focus .logo__mobile,
-.page-footer__logo:hover .logo__desktop--x,
-.page-footer__logo:focus .logo__desktop--x {
+.page-footer__logo:hover .logo__desktop-x,
+.page-footer__logo:focus .logo__desktop-x {
   fill: $accent-color;
 }
 
@@ -88,23 +88,23 @@
 }
 
 .page-footer__logo:active .logo__mobile,
-.page-footer__logo:focus .logo__desktop--x {
+.page-footer__logo:focus .logo__desktop-x {
   fill: $basic-dark;
   opacity: 0.3;
 }
 
-.page-header__logo:not(.page-header__logo--active):active .logo__desktop--x,
-.page-header__logo:not(.page-header__logo--active):active .logo__desktop--i,
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop-x,
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop-i,
 .page-footer__logo:active .logo__tablet,
-.page-footer__logo:active .logo__desktop--i {
+.page-footer__logo:active .logo__desktop-i {
   opacity: 0.3;
 }
 
-.page-header__logo:not(.page-header__logo--active):active .logo__desktop--path {
+.page-header__logo:not(.page-header__logo--active):active .logo__desktop-path {
   fill: $extra-light;
   opacity: 0.5;
 }
 
-.page-footer__logo:active .logo__desktop--path {
+.page-footer__logo:active .logo__desktop-path {
   opacity: 0.5;
 }
