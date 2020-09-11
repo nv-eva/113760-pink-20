@@ -25,17 +25,17 @@
     padding-right: 0;
     padding-left: 0;
   }
+}
 
-  &--please {
-    display: none;
+.form__intro-please {
+  display: none;
 
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 
-    @media (min-width: $desktop-width) {
-      display: inline-block;
-    }
+  @media (min-width: $desktop-width) {
+    display: inline-block;
   }
 }
 
