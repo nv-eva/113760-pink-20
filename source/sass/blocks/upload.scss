@@ -272,7 +272,8 @@
     margin-left: 92px;
   }
 
-  &::-webkit-slider-thumb {
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb {
     width: 14px;
     height: 14px;
     background-color: $extra-light;
