@@ -70,12 +70,6 @@
   }
 }
 
-.form br {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 /* Form label */
 .form__label {
   margin-bottom: -10px;
