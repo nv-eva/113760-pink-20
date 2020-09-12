@@ -272,8 +272,18 @@
     margin-left: 92px;
   }
 
-  &::-webkit-slider-thumb,
   &::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background-color: $extra-light;
+    border-radius: 50%;
+    border: 2px solid $accent-color;
+    transform: translateX(1px) translateY(1px);
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &::-webkit-slider-thumb {
     width: 14px;
     height: 14px;
     background-color: $extra-light;
