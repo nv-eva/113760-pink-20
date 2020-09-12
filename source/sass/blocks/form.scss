@@ -51,7 +51,7 @@
     display: grid;
     grid-template-columns: auto 470px 470px auto;
     justify-content: center;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
   }
 }
 
@@ -287,7 +287,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    margin-bottom: 1px;
+    margin-bottom: 19px;
   }
 }
 
@@ -600,6 +600,7 @@
   @media (min-width: $desktop-width) {
     grid-column-start: 2;
     grid-column-end: 4;
+    margin-top: 16px;
   }
 }
 
@@ -616,7 +617,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    transform: translateY(-9px);
+    transform: translateY(-18px);
   }
 
   &--hidden {
@@ -624,6 +625,8 @@
 
     @media (min-width: $desktop-width) {
       display: inline-block;
+      vertical-align: baseline;
+      transform: translateY(0);
     }
   }
 
