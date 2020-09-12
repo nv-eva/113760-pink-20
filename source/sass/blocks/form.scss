@@ -242,23 +242,17 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    -webkit-margin-before: -7px;
+    margin-top: 0;
     padding-top: 0;
     padding-bottom: 16px;
 
     &:last-child {
-      -webkit-margin-before: -25px;
       padding-bottom: 10px;
     }
   }
 
   @media (min-width: $desktop-width) {
     flex-grow: 1;
-    -webkit-margin-before: -12px;
-
-    &:last-child {
-      -webkit-margin-before: -12px;
-    }
   }
 }
 
@@ -295,8 +289,6 @@
 
 .form__text--contacts .form__text-input {
   @media (min-width: $tablet-width) {
-    margin-top: 0;
-
     &--phone {
       background: url("../img/sprite-phone.svg") center right 19px no-repeat, linear-gradient(-90deg, $medium-1 59px, $extra-light 59px);
     }
