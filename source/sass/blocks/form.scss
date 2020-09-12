@@ -249,6 +249,10 @@
     &:last-child {
       padding-bottom: 10px;
     }
+
+    br {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
