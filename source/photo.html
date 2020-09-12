@@ -226,6 +226,7 @@
             <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
             <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" width="280" height="374" alt="Фотография для загрузки">
           </picture>
+          <!--
           <div class="upload__tools">
             <button class="upload__tool upload__tool--crop upload__tool--current" type="button" aria-label="Кадрирование">
               <svg class="upload__icon" width="44px" height="44px">
@@ -243,15 +244,34 @@
               </svg>
             </button>
           </div>
-          <ul class="upload__ranges">
-            <li class="upload__range upload__range--crop">
-              <input type="range" name="range--crop" min="0" max="100" value="78">
+        -->
+          <ul class="upload__list">
+            <li class="upload__item">
+              <button class="upload__tool upload__tool--crop upload__tool--current" type="button" aria-label="Кадрирование">
+                <svg class="upload__icon" width="44px" height="44px">
+                  <use xlink:href="#sprite-crop"></use>
+                </svg>
+              </button>
+              <label class="visually-hidden" for="range-crop">Кадрирование</label>
+              <input class="upload__range upload__range--crop" type="range" id="range-crop" name="range--crop" min="0" max="100" value="78">
             </li>
-            <li class="upload__range upload__range--fill upload__range--hidden">
-              <input type="range" name="range--fill" min="0" max="100" value="13">
+            <li class="upload__item">
+              <button class="upload__tool upload__tool--fill" type="button" aria-label="Заливка">
+                <svg class="upload__icon" width="48px" height="43px">
+                  <use xlink:href="#sprite-fill"></use>
+                </svg>
+              </button>
+              <label class="visually-hidden" for="range-fill">Заливка</label>
+              <input class="upload__range upload__range--fill upload__range--hidden" type="range" id="range-fill" name="range--fill" min="0" max="100" value="13">
             </li>
-            <li class="upload__range upload__range--contrast upload__range--hidden">
-              <input type="range" name="range--contrast" min="0" max="100" value="50">
+            <li class="upload__item">
+              <button class="upload__tool upload__tool--contrast" type="button" aria-label="Контрастность">
+                <svg class="upload__icon" width="32px" height="32px">
+                  <use xlink:href="#sprite-contrast"></use>
+                </svg>
+              </button>
+              <label class="visually-hidden" for="range-contrast">Контрастность</label>
+              <input class="upload__range upload__range--contrast upload__range--hidden" type="range" id="range-contrast" name="range--contrast" min="0" max="100" value="50">
             </li>
           </ul>
           <div class="upload__buttons">
