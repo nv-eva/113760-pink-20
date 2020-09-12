@@ -242,40 +242,22 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    -webkit-margin-before: -7px;
+    padding-top: 0;
     padding-bottom: 16px;
 
     &:last-child {
+      -webkit-margin-before: -25px;
       padding-bottom: 10px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 7px;
-      right: 2px;
-      display: block;
-      width: 59px;
-      height: 59px;
-      background-color: $medium-1;
-      z-index: 1;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &--phone::after {
-      background-image: url("../img/sprite-phone.svg");
-    }
-
-    &--email::after {
-      background-image: url("../img/sprite-mail.svg");
     }
   }
 
   @media (min-width: $desktop-width) {
     flex-grow: 1;
+    -webkit-margin-before: -12px;
 
-    &::after {
-      top: 5px;
+    &:last-child {
+      -webkit-margin-before: -12px;
     }
   }
 }
@@ -290,9 +272,10 @@
   margin-left: 24px;
 
   @media (min-width: $tablet-width) {
+    position: static;
     margin-top: 13px;
     margin-left: 19px;
-    order: 2;
+    order: 1;
   }
 
   @media (min-width: $desktop-width) {
@@ -310,7 +293,19 @@
   }
 }
 
-.form__text--contacts input {
+.form__text--contacts .form__text-input {
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+
+    &--phone {
+      background: url("../img/sprite-phone.svg") center right 19px no-repeat, linear-gradient(-90deg, $medium-1 59px, $extra-light 59px);
+    }
+
+    &--email {
+      background: url("../img/sprite-mail.svg") center right 20px no-repeat, linear-gradient(-90deg, $medium-1 59px, $extra-light 59px);
+    }
+  }
+
   @media (min-width: $desktop-width) {
     width: 100%;
     margin-top: 3px;
